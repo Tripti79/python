@@ -1,0 +1,2462 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.3)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://visualdataweb.org/newOntology/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@base 			<http://visualdataweb.org/newOntology/> .
+
+<http://visualdataweb.org/newOntology/> rdf:type owl:Ontology ;
+                                        dc:title "New ontology"@en; 
+                                        dc:description "New ontology description"@en . 
+#################################################################
+
+###  Property Definitions (Number of Property) 301 ###
+#  --------------------------- Property 0------------------------- 
+:Function_has_FunctionPort rdf:type owl:ObjectProperty ;
+                           rdfs:label "has"@en; 
+                           rdfs:domain :Function;
+                           rdfs:range :FunctionPort . 
+#  --------------------------- Property 1------------------------- 
+:Function_has_FunctionInterface rdf:type owl:ObjectProperty ;
+                                rdfs:label "has"@en; 
+                                rdfs:domain :Function;
+                                rdfs:range :FunctionInterface . 
+#  --------------------------- Property 2------------------------- 
+:FunctionInterface_uses_FunctionPort rdf:type owl:ObjectProperty ;
+                                     rdfs:label "uses"@en; 
+                                     rdfs:domain :FunctionInterface;
+                                     rdfs:range :FunctionPort . 
+#  --------------------------- Property 3------------------------- 
+:FailureCondition_effects_FunctionArchiteture rdf:type owl:ObjectProperty ;
+                                              rdfs:label "effects"@en; 
+                                              rdfs:domain :FailureCondition;
+                                              rdfs:range :FunctionArchitecture . 
+#  --------------------------- Property 4------------------------- 
+:FunctionalHazardAssessment_assesses_FailureCondition rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "assesses"@en; 
+                                                      rdfs:domain :FunctionalHazardAssessment;
+                                                      rdfs:range :FailureCondition . 
+#  --------------------------- Property 5------------------------- 
+:FunctionalHazardAssessment_assesses_FunctionArchitecture rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "assesses"@en; 
+                                                          rdfs:domain :FunctionalHazardAssessment;
+                                                          rdfs:range :FunctionArchitecture . 
+#  --------------------------- Property 6------------------------- 
+:FunctionInterface_decomposes_FunctionInterface rdf:type owl:ObjectProperty ;
+                                                rdfs:label "decomposes"@en; 
+                                                rdfs:domain :FunctionInterface;
+                                                rdfs:range :FunctionInterface . 
+#  --------------------------- Property 7------------------------- 
+:FunctionPort_decomposes_FunctionPort rdf:type owl:ObjectProperty ;
+                                      rdfs:label "decomposes"@en; 
+                                      rdfs:domain :FunctionPort;
+                                      rdfs:range :FunctionPort . 
+#  --------------------------- Property 8------------------------- 
+:references rdf:type owl:ObjectProperty ;
+            rdfs:label "references"@en; 
+            rdfs:domain :LogicalSystemOccurrence;
+            rdfs:range :LogicalSystem . 
+#  --------------------------- Property 9------------------------- 
+:decomposes rdf:type owl:ObjectProperty ;
+            rdfs:label "decomposes"@en; 
+            rdfs:domain :LogicalSystem;
+            rdfs:range :LogicalSystemOccurrence . 
+#  --------------------------- Property 10------------------------- 
+:Logical_System_Location rdf:type owl:DatatypeProperty ;
+                         rdfs:label "Logical System Location"@en; 
+                         rdfs:domain :LogicalSystemOccurrence;
+                         rdfs:range rdfs:Literal . 
+#  --------------------------- Property 11------------------------- 
+:Requirement_IsAllocatedTo_ConfigurationInformation_In rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "Is Allocated To"@en; 
+                                                       rdfs:domain :Requirement;
+                                                       rdfs:range :Rel_Requirement_IsAllocatedTo_ConfigurationInformation . 
+#  --------------------------- Property 12------------------------- 
+:Requirement_IsAllocatedTo_ConfigurationInformation_Out rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "IsAllocatedTo"@en; 
+                                                        rdfs:domain :Rel_Requirement_IsAllocatedTo_ConfigurationInformation;
+                                                        rdfs:range :ConfigurationInformation . 
+#  --------------------------- Property 13------------------------- 
+:RequirementsAllocationFlowDown rdf:type owl:ObjectProperty ;
+                                rdfs:label "Requirements Allocation Flow Down"@en; 
+                                rdfs:domain :Rel_Requirement_IsAllocatedTo_ConfigurationInformation;
+                                rdfs:range :Rel_Requirement_IsAllocatedTo_ConfigurationInformation . 
+#  --------------------------- Property 14------------------------- 
+:Rel_ConfigurationInformation_Satisfies_Requirement_In rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "satisfies"@en; 
+                                                       rdfs:domain :ConfigurationInformation;
+                                                       rdfs:range :Rel_ConfigurationInformation_Satisfies_Requirement . 
+#  --------------------------- Property 15------------------------- 
+:Rel_ConfigurationInformation_Satisfies_Requirement_Out rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "satisfies"@en; 
+                                                        rdfs:domain :Rel_ConfigurationInformation_Satisfies_Requirement;
+                                                        rdfs:range :Requirement . 
+#  --------------------------- Property 16------------------------- 
+:verified rdf:type owl:DatatypeProperty ;
+          rdfs:label "verified"@en; 
+          rdfs:domain :Rel_ConfigurationInformation_Satisfies_Requirement;
+          rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 17------------------------- 
+:Requirement_decomposes_Requirement rdf:type owl:ObjectProperty ;
+                                    rdfs:label "decomposes"@en; 
+                                    rdfs:domain :Requirement;
+                                    rdfs:range :Requirement . 
+#  --------------------------- Property 18------------------------- 
+:FunctionalRequirement_applyTo_FunctionArchitecture rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "applyTo"@en; 
+                                                    rdfs:domain :FunctionalRequirements;
+                                                    rdfs:range :FunctionArchitecture . 
+#  --------------------------- Property 19------------------------- 
+:FunctionalHazardAssessment_AssessedAgainst_OperatingConditions rdf:type owl:ObjectProperty ;
+                                                                rdfs:label "Assessed Against"@en; 
+                                                                rdfs:domain :FunctionalHazardAssessment;
+                                                                rdfs:range :OperatingConditions . 
+#  --------------------------- Property 20------------------------- 
+:Phase rdf:type owl:DatatypeProperty ;
+       rdfs:label "Phase"@en; 
+       rdfs:domain :FunctionalHazardAssessment;
+       rdfs:range rdfs:Literal . 
+#  --------------------------- Property 21------------------------- 
+:SeverityClass rdf:type owl:DatatypeProperty ;
+               rdfs:label "SeverityClass"@en; 
+               rdfs:domain :FunctionalHazardAssessment;
+               rdfs:range rdfs:Literal . 
+#  --------------------------- Property 22------------------------- 
+:establishes rdf:type owl:ObjectProperty ;
+             rdfs:label "establishes"@en; 
+             rdfs:domain :FunctionalHazardAssessment;
+             rdfs:range :FailureEffect . 
+#  --------------------------- Property 23------------------------- 
+:FuntionalHazardAssessment_expected_FlightCrewAction_Out rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "expected"@en; 
+                                                         rdfs:domain :Rel_FunctionalHazardAssessment_expected_FlightCrewAction;
+                                                         rdfs:range :FlightCrewAction . 
+#  --------------------------- Property 24------------------------- 
+:FuntionalHazardAssessment_expected_FlightCrewAction_In rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "expected"@en; 
+                                                        rdfs:domain :FunctionalHazardAssessment;
+                                                        rdfs:range :Rel_FunctionalHazardAssessment_expected_FlightCrewAction . 
+#  --------------------------- Property 25------------------------- 
+:FailureEffectSubstantiation_substantiates_Rel_FunctionalHazardAssessment_expected_FlightCrewAction rdf:type owl:ObjectProperty ;
+                                                                                                    rdfs:label "substantiates"@en; 
+                                                                                                    rdfs:domain :Rel_FunctionalHazardAssessment_expected_FlightCrewAction;
+                                                                                                    rdfs:range :FailureEffectSubstantiation . 
+#  --------------------------- Property 26------------------------- 
+:FailureEffectSubstantiation_substantiates_FailureEffect rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "substantiates"@en; 
+                                                         rdfs:domain :FailureEffectSubstantiation;
+                                                         rdfs:range :FailureEffect . 
+#  --------------------------- Property 27------------------------- 
+:FunctionalHazardAssessment_has_VerificationApproach rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "has"@en; 
+                                                     rdfs:domain :FunctionalHazardAssessment;
+                                                     rdfs:range :VerificationApproach . 
+#  --------------------------- Property 28------------------------- 
+:FunctionalHazardAssessment_assumes_OperatingCondition rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "assumes"@en; 
+                                                       rdfs:domain :FunctionalHazardAssessment;
+                                                       rdfs:range :OperatingConditions . 
+#  --------------------------- Property 29------------------------- 
+:FunctionalHazardAssessment_assesses_LogicalSystem rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "assesses"@en; 
+                                                   rdfs:domain :FunctionalHazardAssessment;
+                                                   rdfs:range :LogicalSystem . 
+#  --------------------------- Property 30------------------------- 
+:NatureOfFailureConditionOnFunction_assesses_FailureCondition rdf:type owl:ObjectProperty ;
+                                                              rdfs:label "assesses"@en; 
+                                                              rdfs:domain :Rel_NatureOfFailureConditionForFunction;
+                                                              rdfs:range :FailureCondition . 
+#  --------------------------- Property 31------------------------- 
+:NatureOfFailureCondition_Assesses_FunctionArchitecture rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "Assesses"@en; 
+                                                        rdfs:domain :Rel_NatureOfFailureConditionForFunction;
+                                                        rdfs:range :FunctionArchitecture . 
+#  --------------------------- Property 32------------------------- 
+:LossOfFunction rdf:type owl:DatatypeProperty ;
+                rdfs:label "LossOfFunction"@en; 
+                rdfs:domain :Rel_NatureOfFailureConditionForFunction;
+                rdfs:range rdfs:Literal . 
+#  --------------------------- Property 33------------------------- 
+:malfunction rdf:type owl:DatatypeProperty ;
+             rdfs:label "malfunction"@en; 
+             rdfs:domain :Rel_NatureOfFailureConditionForFunction;
+             rdfs:range rdfs:Literal . 
+#  --------------------------- Property 34------------------------- 
+:FlightCrew_performs_FlightCrewActions rdf:type owl:ObjectProperty ;
+                                       rdfs:label "performs"@en; 
+                                       rdfs:domain :FlightCrew;
+                                       rdfs:range :FlightCrewAction . 
+#  --------------------------- Property 35------------------------- 
+:FlightCrew_isAware_Of_FailureCondition_Out rdf:type owl:ObjectProperty ;
+                                            rdfs:label "isAwareOf"@en; 
+                                            rdfs:domain :Rel_FlightCrewAwareness;
+                                            rdfs:range :FailureCondition . 
+#  --------------------------- Property 36------------------------- 
+:FlightCrew_isAware_Of_FailureCondition_In rdf:type owl:ObjectProperty ;
+                                           rdfs:label "is Aware Of"@en; 
+                                           rdfs:domain :FlightCrew;
+                                           rdfs:range :Rel_FlightCrewAwareness . 
+#  --------------------------- Property 37------------------------- 
+:indication rdf:type owl:DatatypeProperty ;
+            rdfs:label "indication"@en; 
+            rdfs:domain :Rel_FlightCrewAwareness;
+            rdfs:range xsd:boolean . 
+#  --------------------------- Property 38------------------------- 
+:Awareness rdf:type owl:DatatypeProperty ;
+           rdfs:label "Awareness"@en; 
+           rdfs:domain :Rel_FlightCrewAwareness;
+           rdfs:range xsd:boolean . 
+#  --------------------------- Property 39------------------------- 
+:LogicalSystem_indicates_Rel_FlightCrew_IsAwareOf_FailureCondition rdf:type owl:ObjectProperty ;
+                                                                   rdfs:label "indicates"@en; 
+                                                                   rdfs:domain :LogicalSystem;
+                                                                   rdfs:range :Rel_FlightCrewAwareness . 
+#  --------------------------- Property 40------------------------- 
+:FailureEffect_affects_FlightCrew rdf:type owl:ObjectProperty ;
+                                  rdfs:label "affects"@en; 
+                                  rdfs:domain :FailureEffect;
+                                  rdfs:range :FlightCrew . 
+#  --------------------------- Property 41------------------------- 
+:FailureEffect_effects_Airplane rdf:type owl:ObjectProperty ;
+                                rdfs:label "effects"@en; 
+                                rdfs:domain :FailureEffect;
+                                rdfs:range :Airplane . 
+#  --------------------------- Property 42------------------------- 
+:FailurrEffect_affects_AirplaneOccupants rdf:type owl:ObjectProperty ;
+                                         rdfs:label "affects"@en; 
+                                         rdfs:domain :FailureEffect;
+                                         rdfs:range :AirplaneOccupants . 
+#  --------------------------- Property 43------------------------- 
+:FailureEffect_effects_interfacing_LogicalSystem rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "effects interfacing"@en; 
+                                                 rdfs:domain :FailureEffect;
+                                                 rdfs:range :LogicalSystem . 
+#  --------------------------- Property 44------------------------- 
+:LogicalSystem_has_LogicalSystemPort rdf:type owl:ObjectProperty ;
+                                     rdfs:label "has"@en; 
+                                     rdfs:domain :LogicalSystem;
+                                     rdfs:range :LogicalSystemPort . 
+#  --------------------------- Property 45------------------------- 
+:Function_IsAllocatedTo_LogicaSystem rdf:type owl:ObjectProperty ;
+                                     rdfs:label "IsAllocatedTo"@en; 
+                                     rdfs:domain :Function;
+                                     rdfs:range :LogicalSystem . 
+#  --------------------------- Property 46------------------------- 
+:FunctionPort_IsAllocatedTo_LogicalSystemPort rdf:type owl:ObjectProperty ;
+                                              rdfs:label "IsAllocatedTo"@en; 
+                                              rdfs:domain :FunctionPort;
+                                              rdfs:range :LogicalSystemPort . 
+#  --------------------------- Property 47------------------------- 
+:LogicalSystemPort_decomposes_LogocalSystemPort rdf:type owl:ObjectProperty ;
+                                                rdfs:label "decomposes"@en; 
+                                                rdfs:domain :LogicalSystemPort;
+                                                rdfs:range :LogicalSystemPort . 
+#  --------------------------- Property 48------------------------- 
+:LogicalSystenInterface_decomposes_LogicalSystenInterface rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "decomposes"@en; 
+                                                          rdfs:domain :LogicalSystemInterface;
+                                                          rdfs:range :LogicalSystemInterface . 
+#  --------------------------- Property 49------------------------- 
+:FunctionInterface_isAllocatedTo_LogicalSystemInterface rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "is Allocated To"@en; 
+                                                        rdfs:domain :FunctionInterface;
+                                                        rdfs:range :LogicalSystemInterface . 
+#  --------------------------- Property 50------------------------- 
+:Rel_LogicalSystemInterface_connects_LogicalSystemPort_In rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "connects"@en; 
+                                                          rdfs:domain :LogicalSystemInterface;
+                                                          rdfs:range :Rel_LogicalSystemInterface_connects_LogicalSystemPort . 
+#  --------------------------- Property 51------------------------- 
+:Rel_LogicalSystemInterface_connects_LogicalSystemPort_Out rdf:type owl:ObjectProperty ;
+                                                           rdfs:label "connects"@en; 
+                                                           rdfs:domain :Rel_LogicalSystemInterface_connects_LogicalSystemPort;
+                                                           rdfs:range :LogicalSystemPort . 
+#  --------------------------- Property 52------------------------- 
+:ProductDesign_decomposes_MinorModelDesign_In rdf:type owl:ObjectProperty ;
+                                              rdfs:label "decomposes"@en; 
+                                              rdfs:domain :ProductDesign;
+                                              rdfs:range :Rel_ProductDesign_decomposes_MinorModelDesign . 
+#  --------------------------- Property 53------------------------- 
+:ProductDesign_decomposes_MinorModelDesign_Out rdf:type owl:ObjectProperty ;
+                                               rdfs:label "decomposes"@en; 
+                                               rdfs:domain :Rel_ProductDesign_decomposes_MinorModelDesign;
+                                               rdfs:range :MinorModelDesogn . 
+#  --------------------------- Property 54------------------------- 
+:Minor_Model rdf:type owl:DatatypeProperty ;
+             rdfs:label "Minor Model"@en; 
+             rdfs:domain :Rel_ProductDesign_decomposes_MinorModelDesign;
+             rdfs:range xsd:string . 
+#  --------------------------- Property 55------------------------- 
+:MinorModelDesign_decomposes_CollectorProductDesign_Out rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "decomposes"@en; 
+                                                        rdfs:domain :Rel_MinorModelDesign_decomposes_CollectorProductDesign;
+                                                        rdfs:range :CollectorProductDesign . 
+#  --------------------------- Property 56------------------------- 
+:MinorModelDesign_decomposes_CollectorProductDesign_In rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "decomposes"@en; 
+                                                       rdfs:domain :MinorModelDesogn;
+                                                       rdfs:range :Rel_MinorModelDesign_decomposes_CollectorProductDesign . 
+#  --------------------------- Property 57------------------------- 
+:MinorModel rdf:type owl:DatatypeProperty ;
+            rdfs:label "MinorModel"@en; 
+            rdfs:domain :Rel_MinorModelDesign_decomposes_CollectorProductDesign;
+            rdfs:range xsd:string . 
+#  --------------------------- Property 58------------------------- 
+:CollectorProductDesign_contains_EngineeringInstallation_Out rdf:type owl:ObjectProperty ;
+                                                             rdfs:label "contains"@en; 
+                                                             rdfs:domain :Rel_CollectorProductDesign_contains_EngineeringInstallation;
+                                                             rdfs:range :EngineeringInstallation . 
+#  --------------------------- Property 59------------------------- 
+:CollectorProductDesign_contains_EngineeringInstallation_In rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "contains"@en; 
+                                                            rdfs:domain :CollectorProductDesign;
+                                                            rdfs:range :Rel_CollectorProductDesign_contains_EngineeringInstallation . 
+#  --------------------------- Property 60------------------------- 
+:OptionCombination_makesAvailable_EngineeringInstallation rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "makes Available"@en; 
+                                                          rdfs:domain :OptionCombination;
+                                                          rdfs:range :Rel_CollectorProductDesign_contains_EngineeringInstallation . 
+#  --------------------------- Property 61------------------------- 
+:ChangeOrder_authorizes_ChangeAction rdf:type owl:ObjectProperty ;
+                                     rdfs:label "authorizes"@en; 
+                                     rdfs:domain :Change_Order;
+                                     rdfs:range :Change_Action . 
+#  --------------------------- Property 62------------------------- 
+:ChangeOrder_identifies_existing_ConfigurationInformation rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "identifies existing"@en; 
+                                                          rdfs:domain :Change_Order;
+                                                          rdfs:range :ConfigurationInformation . 
+#  --------------------------- Property 63------------------------- 
+:ChangeOrder_identifies_new_ConfiguraitonInformation rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "identifies new"@en; 
+                                                     rdfs:domain :Change_Order;
+                                                     rdfs:range :ConfigurationInformation . 
+#  --------------------------- Property 64------------------------- 
+:ChangeRequest_initiates_ChangeOrder rdf:type owl:ObjectProperty ;
+                                     rdfs:label "initiates"@en; 
+                                     rdfs:domain :NewClass;
+                                     rdfs:range :Change_Order . 
+#  --------------------------- Property 65------------------------- 
+:ChangeRequest_basedOn_Requirement rdf:type owl:ObjectProperty ;
+                                   rdfs:label "based on"@en; 
+                                   rdfs:domain :NewClass;
+                                   rdfs:range :Requirement . 
+#  --------------------------- Property 66------------------------- 
+:ChangeOrder_based_on_Requirement rdf:type owl:ObjectProperty ;
+                                  rdfs:label "based on"@en; 
+                                  rdfs:domain :Change_Order;
+                                  rdfs:range :Requirement . 
+#  --------------------------- Property 67------------------------- 
+:ChangeAction_authorizes_ConfigurationInformation rdf:type owl:ObjectProperty ;
+                                                  rdfs:label "authorizes"@en; 
+                                                  rdfs:domain :Change_Action;
+                                                  rdfs:range :ConfigurationInformation . 
+#  --------------------------- Property 68------------------------- 
+:ChangeImpactAnalysis_analyzes_ChangeOrder rdf:type owl:ObjectProperty ;
+                                           rdfs:label "analyzes"@en; 
+                                           rdfs:domain :Change_Impact_Analysis;
+                                           rdfs:range :Change_Order . 
+#  --------------------------- Property 69------------------------- 
+:ChangeImpactAnalysis_identifies_impacted_ConfigurationInformation rdf:type owl:ObjectProperty ;
+                                                                   rdfs:label "identifies impacted"@en; 
+                                                                   rdfs:domain :Change_Impact_Analysis;
+                                                                   rdfs:range :ConfigurationInformation . 
+#  --------------------------- Property 70------------------------- 
+:ChangeOrder_depends_ChangeOrder rdf:type owl:ObjectProperty ;
+                                 rdfs:label "depends"@en; 
+                                 rdfs:domain :Change_Order;
+                                 rdfs:range :Change_Order . 
+#  --------------------------- Property 71------------------------- 
+:ChangeStatementofWork_implemented_by_ChangeAction rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "implemented by"@en; 
+                                                   rdfs:domain :Change_Statement_of_Work;
+                                                   rdfs:range :Change_Action . 
+#  --------------------------- Property 72------------------------- 
+:OptionCombination_logicallyCombines_OptionCombination rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "logicallyCombines"@en; 
+                                                       rdfs:domain :OptionCombination;
+                                                       rdfs:range :CustomerOption . 
+#  --------------------------- Property 73------------------------- 
+:Location rdf:type owl:DatatypeProperty ;
+          rdfs:label "Location"@en; 
+          rdfs:domain :LocalizedCustomerOption;
+          rdfs:range xsd:double . 
+#  --------------------------- Property 74------------------------- 
+:LocalizedCustomerOption_instances_nonLocalizedCustomerOption rdf:type owl:ObjectProperty ;
+                                                              rdfs:label "instances"@en; 
+                                                              rdfs:domain :LocalizedCustomerOption;
+                                                              rdfs:range :NonLocalizedCustomerOption . 
+#  --------------------------- Property 75------------------------- 
+:CustomerSpecificOptionSelection_contains_CustomerOption rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "contains"@en; 
+                                                         rdfs:domain :CustomerSpecificOptionSelection;
+                                                         rdfs:range :CustomerOption . 
+#  --------------------------- Property 76------------------------- 
+:nonLocalizedCustomerOption_decomposes_nonLocalizedCustomerOption rdf:type owl:ObjectProperty ;
+                                                                  rdfs:label "decomposes"@en; 
+                                                                  rdfs:domain :NonLocalizedCustomerOption;
+                                                                  rdfs:range :NonLocalizedCustomerOption . 
+#  --------------------------- Property 77------------------------- 
+:CustomerSelectableAttributes rdf:type owl:DatatypeProperty ;
+                              rdfs:label "CustomerSelectableAttributes"@en; 
+                              rdfs:domain :Attributable_Customer_Option;
+                              rdfs:range rdfs:Literal . 
+#  --------------------------- Property 78------------------------- 
+:ProductionCustomerSpecificOptionSelection_AssignedTo_ProductionAirplane rdf:type owl:ObjectProperty ;
+                                                                         rdfs:label "Assigned To"@en; 
+                                                                         rdfs:domain :ProductionCustomerSpecificOptionSelection;
+                                                                         rdfs:range :AllocatedProductionAirplane . 
+#  --------------------------- Property 79------------------------- 
+:AllocatedProductionAirplane_assignedTo_AirplaneFiringOrder rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "assigned To"@en; 
+                                                            rdfs:domain :AllocatedProductionAirplane;
+                                                            rdfs:range :AirplaneFiringOrderSlot . 
+#  --------------------------- Property 80------------------------- 
+:SkylinePosition_assignedTo_AirplaneFiringOrderSlot rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "assignedTo"@en; 
+                                                    rdfs:domain :SkylinePosition;
+                                                    rdfs:range :AirplaneFiringOrderSlot . 
+#  --------------------------- Property 81------------------------- 
+:ContractualParts_specifySpecificParts_CustomerOption rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "specifySpecificParts"@en; 
+                                                      rdfs:domain :ContractualParts;
+                                                      rdfs:range :CustomerOption . 
+#  --------------------------- Property 82------------------------- 
+:ProductionLineNumber rdf:type owl:DatatypeProperty ;
+                      rdfs:label "Production Line Number"@en; 
+                      rdfs:domain :AirplaneFiringOrderSlot;
+                      rdfs:range xsd:integer . 
+#  --------------------------- Property 83------------------------- 
+:AirplaneFiringOrder_contains_AirplaneFiringOrderSlot rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "contains"@en; 
+                                                      rdfs:domain :AirplaneFiringOrder;
+                                                      rdfs:range :AirplaneFiringOrderSlot . 
+#  --------------------------- Property 84------------------------- 
+:AirplaneFiringOrderSlot_assigns_ProductionLocation rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "assigns"@en; 
+                                                    rdfs:domain :AirplaneFiringOrderSlot;
+                                                    rdfs:range :ProductionLocation . 
+#  --------------------------- Property 85------------------------- 
+:Skyline_contains_SkylinePosition rdf:type owl:ObjectProperty ;
+                                  rdfs:label "contains"@en; 
+                                  rdfs:domain :Skyline;
+                                  rdfs:range :SkylinePosition . 
+#  --------------------------- Property 86------------------------- 
+:AirplaneFiringOrder_implements_Skyline rdf:type owl:ObjectProperty ;
+                                        rdfs:label "implements"@en; 
+                                        rdfs:domain :AirplaneFiringOrder;
+                                        rdfs:range :Skyline . 
+#  --------------------------- Property 87------------------------- 
+:AquisitionCSOS_isAssignedTo_AquisitionAirplane rdf:type owl:ObjectProperty ;
+                                                rdfs:label "is Assigned To"@en; 
+                                                rdfs:domain :AcquisitionCustomerSpecificOptionSelection;
+                                                rdfs:range :AcquisitionAirplane . 
+#  --------------------------- Property 88------------------------- 
+:AquisitionAirplane_assignedTo_SkylinePosition rdf:type owl:ObjectProperty ;
+                                               rdfs:label "assignedTo"@en; 
+                                               rdfs:domain :AcquisitionAirplane;
+                                               rdfs:range :SkylinePosition . 
+#  --------------------------- Property 89------------------------- 
+:Function_decomposes_Function rdf:type owl:ObjectProperty ;
+                              rdfs:label "decomposes"@en; 
+                              rdfs:domain :Function;
+                              rdfs:range :Function . 
+#  --------------------------- Property 90------------------------- 
+:Part_Number rdf:type owl:DatatypeProperty ;
+             rdfs:label "Part Number"@en; 
+             rdfs:domain :Physical_Design;
+             rdfs:range xsd:string . 
+#  --------------------------- Property 91------------------------- 
+:LogicalElement_has_ElementConstraints rdf:type owl:ObjectProperty ;
+                                       rdfs:label "has"@en; 
+                                       rdfs:domain :LogicalElement;
+                                       rdfs:range :ElementConstraints . 
+#  --------------------------- Property 92------------------------- 
+:SpecificationControlDrawing_specifies_LogicalElement rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "specifies"@en; 
+                                                      rdfs:domain :SpecificationControlDrawingDocument;
+                                                      rdfs:range :LogicalElement . 
+#  --------------------------- Property 93------------------------- 
+:SpecificationControlDrawing_specifies_LogicalAssembly rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "specifies"@en; 
+                                                       rdfs:domain :SpecificationControlDrawingDocument;
+                                                       rdfs:range :LogicalAssembly . 
+#  --------------------------- Property 94------------------------- 
+:LogicalInstallation_has_SystemEquipmentInstallationSpecification rdf:type owl:ObjectProperty ;
+                                                                  rdfs:label "has"@en; 
+                                                                  rdfs:domain :LogicalInstallation;
+                                                                  rdfs:range :SystemEquipmentInstallationSpecification . 
+#  --------------------------- Property 95------------------------- 
+:LogicalSystem_isImplementedIn_PhysicalDesign rdf:type owl:ObjectProperty ;
+                                              rdfs:label "is implemented in"@en; 
+                                              rdfs:domain :LogicalSystem;
+                                              rdfs:range :Physical_Design . 
+#  --------------------------- Property 96------------------------- 
+:TransportElementSpecification_Specifies_TransportElement  rdf:type owl:ObjectProperty ;
+                                                           rdfs:label "specifies"@en; 
+                                                           rdfs:domain :TransportElementSpecification;
+                                                           rdfs:range :TransportElementDesign . 
+#  --------------------------- Property 97------------------------- 
+:TransportElementAnalysis_impacts_TransportElementSpecification rdf:type owl:ObjectProperty ;
+                                                                rdfs:label "impacts"@en; 
+                                                                rdfs:domain :TransportElementAnalysis;
+                                                                rdfs:range :TransportElementSpecification . 
+#  --------------------------- Property 98------------------------- 
+:LogicalSystemInterface_determines_TransportElementSpecification rdf:type owl:ObjectProperty ;
+                                                                 rdfs:label "determines"@en; 
+                                                                 rdfs:domain :LogicalSystemInterface;
+                                                                 rdfs:range :TransportElementSpecification . 
+#  --------------------------- Property 99------------------------- 
+:LogicalSystemInterface_has_TransportElementAnalysis rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "has"@en; 
+                                                     rdfs:domain :LogicalSystemInterface;
+                                                     rdfs:range :TransportElementAnalysis . 
+#  --------------------------- Property 100------------------------- 
+:LogicalSystemSchematics_documents_LogicalSystemArchitecture rdf:type owl:ObjectProperty ;
+                                                             rdfs:label "documents"@en; 
+                                                             rdfs:domain :LogicalSystemSchematics;
+                                                             rdfs:range :LogicalSystemArchitecture . 
+#  --------------------------- Property 101------------------------- 
+:LogicalSystemPortOccurrence_isAllocatedTo_SystemPinToPinDesign rdf:type owl:ObjectProperty ;
+                                                                rdfs:label "is Allocated To"@en; 
+                                                                rdfs:domain :LogicalSystemPortOccurrence;
+                                                                rdfs:range :SystemPinToPinDesign . 
+#  --------------------------- Property 102------------------------- 
+:LogicalSystemInterface_isAllocatedTo_SystemWiringDesign rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "is Allocated To"@en; 
+                                                         rdfs:domain :LogicalSystemInterface;
+                                                         rdfs:range :SystemWiringDesign . 
+#  --------------------------- Property 103------------------------- 
+:LogicalSystemInterface_isAllocatedTo_PathwayArchitecture rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "is Allocated To"@en; 
+                                                          rdfs:domain :LogicalSystemInterface;
+                                                          rdfs:range :PathwayArchitecture . 
+#  --------------------------- Property 104------------------------- 
+:LogicalSystemInterface_isAllocatedTo_WiringInstallationArchitecture rdf:type owl:ObjectProperty ;
+                                                                     rdfs:label "is Allocated To"@en; 
+                                                                     rdfs:domain :LogicalSystemInterface;
+                                                                     rdfs:range :WiringInstallationArchitecture . 
+#  --------------------------- Property 105------------------------- 
+:WiringInstallationArchitecture_isAccountableTo_PathwayArchitecture rdf:type owl:ObjectProperty ;
+                                                                    rdfs:label "is Accountable To"@en; 
+                                                                    rdfs:domain :WiringInstallationArchitecture;
+                                                                    rdfs:range :PathwayArchitecture . 
+#  --------------------------- Property 106------------------------- 
+:WiringInstallationArchitecture_isAllocatedTo_WireInstallationDetailDesign rdf:type owl:ObjectProperty ;
+                                                                           rdfs:label "is Allocated To"@en; 
+                                                                           rdfs:domain :WiringInstallationArchitecture;
+                                                                           rdfs:range :WireInstallationDetailDesign . 
+#  --------------------------- Property 107------------------------- 
+:WireInstallationDetailDesign_SpecifiesInstallationOf_WireBundleDesign rdf:type owl:ObjectProperty ;
+                                                                       rdfs:label "Specifies Installation Of"@en; 
+                                                                       rdfs:domain :WireInstallationDetailDesign;
+                                                                       rdfs:range :WireBundleDesign . 
+#  --------------------------- Property 108------------------------- 
+:PathwayArchitecture_contains_PathwaySpaceReservation rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "contains"@en; 
+                                                      rdfs:domain :PathwayArchitecture;
+                                                      rdfs:range :PathwaySpaceReservation . 
+#  --------------------------- Property 109------------------------- 
+:SystemWiringDesign_isAllocatedTo_LogicalWireBundle rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "isAllocatedTo"@en; 
+                                                    rdfs:domain :SystemWiringDesign;
+                                                    rdfs:range :LogicalWireBundle . 
+#  --------------------------- Property 110------------------------- 
+:LogicalWireBundle_IsAllocatedTo_WireBundleDesign rdf:type owl:ObjectProperty ;
+                                                  rdfs:label "is Allocated to"@en; 
+                                                  rdfs:domain :LogicalWireBundle;
+                                                  rdfs:range :WireBundleDesign . 
+#  --------------------------- Property 111------------------------- 
+:SystemLayout_isAllocatedTo_EquipmentSpaceReservation rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "is Allocated To"@en; 
+                                                      rdfs:domain :SystemLayout;
+                                                      rdfs:range :EquipmentSpaceReservation . 
+#  --------------------------- Property 112------------------------- 
+:SystemLayout_isAllocatedTo_PathwaySpaceReservation rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "is Allocated To"@en; 
+                                                    rdfs:domain :SystemLayout;
+                                                    rdfs:range :PathwaySpaceReservation . 
+#  --------------------------- Property 113------------------------- 
+:LogicalElement_isAllocatedTo_EquipmentList rdf:type owl:ObjectProperty ;
+                                            rdfs:label "is Allocated To"@en; 
+                                            rdfs:domain :LogicalElement;
+                                            rdfs:range :EquipmentList . 
+#  --------------------------- Property 114------------------------- 
+:LogicalElement_IsAllocatedTo_EquipmentInstallationArchitecture rdf:type owl:ObjectProperty ;
+                                                                rdfs:label "is Allocated To"@en; 
+                                                                rdfs:domain :LogicalElement;
+                                                                rdfs:range :EquipmentInstallationArchitecture . 
+#  --------------------------- Property 115------------------------- 
+:LogicalElement_IsAllocatedTo_WiringInstallationArchitecture rdf:type owl:ObjectProperty ;
+                                                             rdfs:label "is Allocated To"@en; 
+                                                             rdfs:domain :LogicalElement;
+                                                             rdfs:range :WiringInstallationArchitecture . 
+#  --------------------------- Property 116------------------------- 
+:SystemEquipmentInstallationSpecification_isAllocatedTo_EngineeringInstallation rdf:type owl:ObjectProperty ;
+                                                                                rdfs:label "is Allocated To"@en; 
+                                                                                rdfs:domain :SystemEquipmentInstallationSpecification;
+                                                                                rdfs:range :EngineeringInstallation . 
+#  --------------------------- Property 117------------------------- 
+:Re_EngineeringInstallationBOM_specifiesInstallOf_PartDesign_In rdf:type owl:ObjectProperty ;
+                                                                rdfs:label "specifies Install Of"@en; 
+                                                                rdfs:domain :EngineeringInstallationBOM;
+                                                                rdfs:range :Rel_EngineeringInstallationBOM_specifiesInstallOf_PartDesign . 
+#  --------------------------- Property 118------------------------- 
+:Re_EngineeringInstallationBOM_specifiesInstallOf_PartDesign_Out rdf:type owl:ObjectProperty ;
+                                                                 rdfs:label "specifies Install Of"@en; 
+                                                                 rdfs:domain :Rel_EngineeringInstallationBOM_specifiesInstallOf_PartDesign;
+                                                                 rdfs:range :PartDesign . 
+#  --------------------------- Property 119------------------------- 
+:Rel_EngineeringInstallationBOM_specifiesInstallationOf_PartDesign_isAllocatedTo_MBOMInstallation rdf:type owl:ObjectProperty ;
+                                                                                                  rdfs:label "is Allocated To"@en; 
+                                                                                                  rdfs:domain :Rel_EngineeringInstallationBOM_specifiesInstallOf_PartDesign;
+                                                                                                  rdfs:range :MBOMInstallation . 
+#  --------------------------- Property 120------------------------- 
+:PlannedProductionAirplane_plannedFor_AirplaneFiringOrderSlot rdf:type owl:ObjectProperty ;
+                                                              rdfs:label "planned For"@en; 
+                                                              rdfs:domain :PlannedProductionAirplane;
+                                                              rdfs:range :AirplaneFiringOrderSlot . 
+#  --------------------------- Property 121------------------------- 
+:Rel_CollectorProductDesign_contains_EngineeringInstallation_assigned_To_PlannedProductionAirplane rdf:type owl:ObjectProperty ;
+                                                                                                   rdfs:label "assigned To"@en; 
+                                                                                                   rdfs:domain :Rel_CollectorProductDesign_contains_EngineeringInstallation;
+                                                                                                   rdfs:range :PlannedProductionAirplane . 
+#  --------------------------- Property 122------------------------- 
+:ProgramDirective_authorizes_AirplaneFiringOrder rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "authorizes"@en; 
+                                                 rdfs:domain :ProgramDirective;
+                                                 rdfs:range :AirplaneFiringOrder . 
+#  --------------------------- Property 123------------------------- 
+:ProgramDirective_authorizes_AllocatedProductionAirplane rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "authorizes"@en; 
+                                                         rdfs:domain :ProgramDirective;
+                                                         rdfs:range :AllocatedProductionAirplane . 
+#  --------------------------- Property 124------------------------- 
+:ControlStation_isLocatedAt_ProductionLocation rdf:type owl:ObjectProperty ;
+                                               rdfs:label "is Located At"@en; 
+                                               rdfs:domain :AreaControlCode;
+                                               rdfs:range :ProductionLocation . 
+#  --------------------------- Property 125------------------------- 
+:Rel_MBOMInstallation_is_Allocated_To_ControlStation_Out rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "is Allocated To"@en; 
+                                                         rdfs:domain :Rel_MBOMInstallation_is_Allocated_To_ControlStation;
+                                                         rdfs:range :AreaControlCode . 
+#  --------------------------- Property 126------------------------- 
+:Rel_MBOMInstallation_is_Allocated_To_ControlStation_In rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "is Allocated To"@en; 
+                                                        rdfs:domain :MBOMInstallation;
+                                                        rdfs:range :Rel_MBOMInstallation_is_Allocated_To_ControlStation . 
+#  --------------------------- Property 127------------------------- 
+:OptionCombination_makesAvailable_Rel_MBOMInstallation_is_Allocated_To_ControlStation rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:label "makes Available"@en; 
+                                                                                      rdfs:domain :OptionCombination;
+                                                                                      rdfs:range :Rel_MBOMInstallation_is_Allocated_To_ControlStation . 
+#  --------------------------- Property 128------------------------- 
+:Rel_MBOMInstallation_is_Allocated_To_ControlStation_assigned_To_PlannedProductionAirplane rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:label "assigned To"@en; 
+                                                                                           rdfs:domain :Rel_MBOMInstallation_is_Allocated_To_ControlStation;
+                                                                                           rdfs:range :PlannedProductionAirplane . 
+#  --------------------------- Property 129------------------------- 
+:Rel_CollectorProductDesign_contains_EngineeringInstallation_applicable_To_AllocatedProductionAirplane rdf:type owl:ObjectProperty ;
+                                                                                                       rdfs:label "applicable To"@en; 
+                                                                                                       rdfs:domain :Rel_CollectorProductDesign_contains_EngineeringInstallation;
+                                                                                                       rdfs:range :AllocatedProductionAirplane . 
+#  --------------------------- Property 130------------------------- 
+:Rel_MBOMInstallation_is_Allocated_To_ControlStation_applicable_To_AllocatedProductionAirplane rdf:type owl:ObjectProperty ;
+                                                                                               rdfs:label "applicable To"@en; 
+                                                                                               rdfs:domain :Rel_MBOMInstallation_is_Allocated_To_ControlStation;
+                                                                                               rdfs:range :AllocatedProductionAirplane . 
+#  --------------------------- Property 131------------------------- 
+:MBOMInstallation_implements_EngineeringInstallation rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "implements"@en; 
+                                                     rdfs:domain :MBOMInstallation;
+                                                     rdfs:range :EngineeringInstallation . 
+#  --------------------------- Property 132------------------------- 
+:Regulation_contains_RegulationItem rdf:type owl:ObjectProperty ;
+                                    rdfs:label "contains"@en; 
+                                    rdfs:domain :Regulation;
+                                    rdfs:range :RegulationItem . 
+#  --------------------------- Property 133------------------------- 
+:VVActivity_contains_VVCase rdf:type owl:ObjectProperty ;
+                            rdfs:label "contains"@en; 
+                            rdfs:domain :VVActivity;
+                            rdfs:range :VVCase . 
+#  --------------------------- Property 134------------------------- 
+:VVResouce_executes_VVActivity rdf:type owl:ObjectProperty ;
+                               rdfs:label "executes"@en; 
+                               rdfs:domain :VVResource;
+                               rdfs:range :VVActivity . 
+#  --------------------------- Property 135------------------------- 
+:VVActivityExecution_executes_VVActivity rdf:type owl:ObjectProperty ;
+                                         rdfs:label "executes"@en; 
+                                         rdfs:domain :VVActivityExecution;
+                                         rdfs:range :VVActivity . 
+#  --------------------------- Property 136------------------------- 
+:VVActivityExecution_uses_VVResource rdf:type owl:ObjectProperty ;
+                                     rdfs:label "uses"@en; 
+                                     rdfs:domain :VVActivityExecution;
+                                     rdfs:range :VVResource . 
+#  --------------------------- Property 137------------------------- 
+:VVActivityExecution_creates_VVArtifact rdf:type owl:ObjectProperty ;
+                                        rdfs:label "creates"@en; 
+                                        rdfs:domain :VVActivityExecution;
+                                        rdfs:range :VVArtifact . 
+#  --------------------------- Property 138------------------------- 
+:VVArtifact_isEvidenceFor_Re_ConfigurationItem_satisfies_Requirement rdf:type owl:ObjectProperty ;
+                                                                     rdfs:label "is Evidence For"@en; 
+                                                                     rdfs:domain :VVArtifact;
+                                                                     rdfs:range :Rel_ConfigurationInformation_Satisfies_Requirement . 
+#  --------------------------- Property 139------------------------- 
+:ComplianceData_contains_VVArtifact rdf:type owl:ObjectProperty ;
+                                    rdfs:label "contains"@en; 
+                                    rdfs:domain :ComplianceData;
+                                    rdfs:range :VVArtifact . 
+#  --------------------------- Property 140------------------------- 
+:ComplianceData_isEvidenceFor_RegulatoryItem rdf:type owl:ObjectProperty ;
+                                             rdfs:label "is Evidence for"@en; 
+                                             rdfs:domain :ComplianceData;
+                                             rdfs:range :RegulationItem . 
+#  --------------------------- Property 141------------------------- 
+:VVActivity_specifies_MeansOfCompliance rdf:type owl:ObjectProperty ;
+                                        rdfs:label "specifies"@en; 
+                                        rdfs:domain :VVActivity;
+                                        rdfs:range :MeansofCompliance . 
+#  --------------------------- Property 142------------------------- 
+:RegulationItem_requires_MeansOfCompliance rdf:type owl:ObjectProperty ;
+                                           rdfs:label "requires"@en; 
+                                           rdfs:domain :RegulationItem;
+                                           rdfs:range :MeansofCompliance . 
+#  --------------------------- Property 143------------------------- 
+:CertificationBasis_specifies_Regulation rdf:type owl:ObjectProperty ;
+                                         rdfs:label "specifies"@en; 
+                                         rdfs:domain :CertificationBasis;
+                                         rdfs:range :Regulation . 
+#  --------------------------- Property 144------------------------- 
+:CertificationPlan_developedFor_CertificationBasis rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "developed For"@en; 
+                                                   rdfs:domain :CertificationPlan;
+                                                   rdfs:range :CertificationBasis . 
+#  --------------------------- Property 145------------------------- 
+:CertificationPlan_contains_MeansOfCompliance rdf:type owl:ObjectProperty ;
+                                              rdfs:label "contains"@en; 
+                                              rdfs:domain :CertificationPlan;
+                                              rdfs:range :MeansofCompliance . 
+#  --------------------------- Property 146------------------------- 
+:AdvisoryCircular_contains_AdvisoryCircularGiudance rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "contains"@en; 
+                                                    rdfs:domain :AdvisoryCircular;
+                                                    rdfs:range :AdvisoryCircularGuidance . 
+#  --------------------------- Property 147------------------------- 
+:AdvisoryCircularGuidance_informs_MeansOfCompliance rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "informs"@en; 
+                                                    rdfs:domain :AdvisoryCircularGuidance;
+                                                    rdfs:range :MeansofCompliance . 
+#  --------------------------- Property 148------------------------- 
+:AdvisoryCircular_supports_Regulation rdf:type owl:ObjectProperty ;
+                                      rdfs:label "supports"@en; 
+                                      rdfs:domain :AdvisoryCircular;
+                                      rdfs:range :Regulation . 
+#  --------------------------- Property 149------------------------- 
+:VerificationApproach_contains_VVCase rdf:type owl:ObjectProperty ;
+                                      rdfs:label "contains"@en; 
+                                      rdfs:domain :VerificationApproach;
+                                      rdfs:range :VVCase . 
+#  --------------------------- Property 150------------------------- 
+:CertificationBasis_contains_CertificationRequirements rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "contains"@en; 
+                                                       rdfs:domain :CertificationBasis;
+                                                       rdfs:range :CertificationRequirements . 
+#  --------------------------- Property 151------------------------- 
+:Rel_AssmblyDesign_specifiesAssemblyOf_PartDesign_In rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "specifies Assembly Of"@en; 
+                                                     rdfs:domain :AssemblyDesign;
+                                                     rdfs:range :AssemblyDesign_Rel_specifiesAssemblyOf_PartDesign . 
+#  --------------------------- Property 152------------------------- 
+:Rel_AssmblyDesign_specifiesAssemblyOf_PartDesign_Out rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "specifies Assembly Of"@en; 
+                                                      rdfs:domain :AssemblyDesign_Rel_specifiesAssemblyOf_PartDesign;
+                                                      rdfs:range :PartDesign . 
+#  --------------------------- Property 153------------------------- 
+:Requirement_dependsOn_Requirement rdf:type owl:ObjectProperty ;
+                                   rdfs:label "depends On"@en; 
+                                   rdfs:domain :Requirement;
+                                   rdfs:range :Requirement . 
+#  --------------------------- Property 154------------------------- 
+:InstallationPlanGroup_assignedTo_ControlStation rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "assigned To"@en; 
+                                                 rdfs:domain :InstallationPlanGroup;
+                                                 rdfs:range :AreaControlCode . 
+#  --------------------------- Property 155------------------------- 
+:InstallationPlanGroup_contains_InstallationPlan rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "contains"@en; 
+                                                 rdfs:domain :InstallationPlanGroup;
+                                                 rdfs:range :InstallationPlan . 
+#  --------------------------- Property 156------------------------- 
+:InstallationPlan_implements_MBOMInstallation rdf:type owl:ObjectProperty ;
+                                              rdfs:label "implements"@en; 
+                                              rdfs:domain :InstallationPlan;
+                                              rdfs:range :MBOMInstallation . 
+#  --------------------------- Property 157------------------------- 
+:Rel_MBOMInstallation_is_Allocated_To_ProductionLocation_Out rdf:type owl:ObjectProperty ;
+                                                             rdfs:label "Is Allocated To"@en; 
+                                                             rdfs:domain :Rel_MBOMInstallation_is_Allocated_To_ProductionLocation;
+                                                             rdfs:range :ProductionLocation . 
+#  --------------------------- Property 158------------------------- 
+:Rel_MBOMInstallation_is_Allocated_To_ProductionLocation_In rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "is Allocated To"@en; 
+                                                            rdfs:domain :Rel_MBOMInstallation_is_Allocated_To_ControlStation;
+                                                            rdfs:range :Rel_MBOMInstallation_is_Allocated_To_ProductionLocation . 
+#  --------------------------- Property 159------------------------- 
+:OptionCombination_assignsSite_Rel_MBOMInstallation_is_Allocated_To_ProductionLocation rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:label "assign Site"@en; 
+                                                                                       rdfs:domain :OptionCombination;
+                                                                                       rdfs:range :Rel_MBOMInstallation_is_Allocated_To_ProductionLocation . 
+#  --------------------------- Property 160------------------------- 
+:ProcessPlan_contains_ProcessPlanOperation rdf:type owl:ObjectProperty ;
+                                           rdfs:label "contains"@en; 
+                                           rdfs:domain :ProcessPlan;
+                                           rdfs:range :ProcessPlanOperation . 
+#  --------------------------- Property 161------------------------- 
+:ProcessPlanOperation_contains_ProcessPlanOperationStep rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "contains"@en; 
+                                                        rdfs:domain :ProcessPlanOperation;
+                                                        rdfs:range :ProcessPlanOperationStep . 
+#  --------------------------- Property 162------------------------- 
+:InstallationPlanOperation_contains_InstallationPlanOperationStep rdf:type owl:ObjectProperty ;
+                                                                  rdfs:label "contains"@en; 
+                                                                  rdfs:domain :InstallationPlanOperation;
+                                                                  rdfs:range :InstallationPlanOperationStep . 
+#  --------------------------- Property 163------------------------- 
+:InstallationPlan_plannedFor_FiringOrderSlot rdf:type owl:ObjectProperty ;
+                                             rdfs:label "planned For"@en; 
+                                             rdfs:domain :InstallationPlan;
+                                             rdfs:range :AirplaneFiringOrderSlot . 
+#  --------------------------- Property 164------------------------- 
+:InstallationPlanOperation_planedFor_FiringOrderSlot rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "planned For"@en; 
+                                                     rdfs:domain :InstallationPlanOperation;
+                                                     rdfs:range :AirplaneFiringOrderSlot . 
+#  --------------------------- Property 165------------------------- 
+:InstllationPlanOperationStep_plannedFor_FiringOrderSlot rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "planned For"@en; 
+                                                         rdfs:domain :InstallationPlanOperationStep;
+                                                         rdfs:range :AirplaneFiringOrderSlot . 
+#  --------------------------- Property 166------------------------- 
+:InstallationPlanOperationStep_implements_Re_EngineeringInstallationBOM_specifiesInstallOf_PartDesign rdf:type owl:ObjectProperty ;
+                                                                                                      rdfs:label "implements"@en; 
+                                                                                                      rdfs:domain :InstallationPlanOperationStep;
+                                                                                                      rdfs:range :Rel_EngineeringInstallationBOM_specifiesInstallOf_PartDesign . 
+#  --------------------------- Property 167------------------------- 
+:WorkCenter_isLocatedAt_ControlStation rdf:type owl:ObjectProperty ;
+                                       rdfs:label "is Located At"@en; 
+                                       rdfs:domain :WorkCenter;
+                                       rdfs:range :AreaControlCode . 
+#  --------------------------- Property 168------------------------- 
+:ProcessPlanOperation_isAssigned_to_WorkCenter rdf:type owl:ObjectProperty ;
+                                               rdfs:label "is Assigned to"@en; 
+                                               rdfs:domain :ProcessPlanOperation;
+                                               rdfs:range :WorkCenter . 
+#  --------------------------- Property 169------------------------- 
+:PartDesign_defines_Part rdf:type owl:ObjectProperty ;
+                         rdfs:label "defines"@en; 
+                         rdfs:domain :PartDesign;
+                         rdfs:range :Part . 
+#  --------------------------- Property 170------------------------- 
+:MaterialMaster_definesNonEngineering_Material rdf:type owl:ObjectProperty ;
+                                               rdfs:label "defines NonEngineering"@en; 
+                                               rdfs:domain :MaterialMaster;
+                                               rdfs:range :Material . 
+#  --------------------------- Property 171------------------------- 
+:MaterialMaster_addsNonEngineeringTo_PartDesign rdf:type owl:ObjectProperty ;
+                                                rdfs:label "adds NonEngineering To"@en; 
+                                                rdfs:domain :MaterialMaster;
+                                                rdfs:range :PartDesign . 
+#  --------------------------- Property 172------------------------- 
+:ProcessPlanOperationStep_succeeds_ProcessPlanOperationStep rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "succeeds"@en; 
+                                                            rdfs:domain :ProcessPlanOperationStep;
+                                                            rdfs:range :ProcessPlanOperationStep . 
+#  --------------------------- Property 173------------------------- 
+:ProcessPlanOperation_succeeds_ProcessPlanOperation rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "succeeds"@en; 
+                                                    rdfs:domain :ProcessPlanOperation;
+                                                    rdfs:range :ProcessPlanOperation . 
+#  --------------------------- Property 174------------------------- 
+:ProcessPlanOperationStep_specifies_Material rdf:type owl:ObjectProperty ;
+                                             rdfs:label "specifies"@en; 
+                                             rdfs:domain :ProcessPlanOperationStep;
+                                             rdfs:range :Material . 
+#  --------------------------- Property 175------------------------- 
+:ProductionOrder_authorizesProductionOf_ShopOrder rdf:type owl:ObjectProperty ;
+                                                  rdfs:label "authorizes Production Of"@en; 
+                                                  rdfs:domain :Production_Order;
+                                                  rdfs:range :ShopOrder . 
+#  --------------------------- Property 176------------------------- 
+:ShopOrder_executes_ProcessPlan rdf:type owl:ObjectProperty ;
+                                rdfs:label "executes"@en; 
+                                rdfs:domain :ShopOrder;
+                                rdfs:range :ProcessPlan . 
+#  --------------------------- Property 177------------------------- 
+:ShopOrder_executesAt_WorkCenter rdf:type owl:ObjectProperty ;
+                                 rdfs:label "executes At"@en; 
+                                 rdfs:domain :ShopOrder;
+                                 rdfs:range :WorkCenter . 
+#  --------------------------- Property 178------------------------- 
+:DetailedProductionSchedule_authorizes_ProductionOrder rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "authorizes"@en; 
+                                                       rdfs:domain :DetailedProductionSchedule;
+                                                       rdfs:range :Production_Order . 
+#  --------------------------- Property 179------------------------- 
+:Re_MBOMInstallation_allocatedTo_Supplier rdf:type owl:ObjectProperty ;
+                                          rdfs:label "allocated To"@en; 
+                                          rdfs:domain :MBOMInstallation;
+                                          rdfs:range :Re_MBOMInstallation_allocatedTo_Supplier . 
+#  --------------------------- Property 180------------------------- 
+:Re_MBOMInstallation_allocatedTo_Supplier_Out rdf:type owl:ObjectProperty ;
+                                              rdfs:label "allocated To"@en; 
+                                              rdfs:domain :Re_MBOMInstallation_allocatedTo_Supplier;
+                                              rdfs:range :Supplier . 
+#  --------------------------- Property 181------------------------- 
+:ProductionOrder_authorizes_Re_MBOMInstallation_allocatedTo_Supplier rdf:type owl:ObjectProperty ;
+                                                                     rdfs:label "authorizes"@en; 
+                                                                     rdfs:domain :Production_Order;
+                                                                     rdfs:range :Re_MBOMInstallation_allocatedTo_Supplier . 
+#  --------------------------- Property 182------------------------- 
+:ShopOrderOperationStep_builds_Part rdf:type owl:ObjectProperty ;
+                                    rdfs:label "builds"@en; 
+                                    rdfs:domain :ShopOrderOperationStep;
+                                    rdfs:range :Part . 
+#  --------------------------- Property 183------------------------- 
+:ShopOrderOperationStep_installs_Part rdf:type owl:ObjectProperty ;
+                                      rdfs:label "installs"@en; 
+                                      rdfs:domain :ShopOrderOperationStep;
+                                      rdfs:range :Part . 
+#  --------------------------- Property 184------------------------- 
+:NonconformanceRecord_defines_Nonconformance rdf:type owl:ObjectProperty ;
+                                             rdfs:label "defines"@en; 
+                                             rdfs:domain :NonconformanceRecord;
+                                             rdfs:range :Nonconformance . 
+#  --------------------------- Property 185------------------------- 
+:NonformanceRecord_identifiesNonconforming_Part rdf:type owl:ObjectProperty ;
+                                                rdfs:label "identifies Nonconforming"@en; 
+                                                rdfs:domain :NonconformanceRecord;
+                                                rdfs:range :Part . 
+#  --------------------------- Property 186------------------------- 
+:NonconformanceRecord_Rel_NonconformanceDispositionFor_Part_Out rdf:type owl:ObjectProperty ;
+                                                                rdfs:label "Nonconformance Disposition For"@en; 
+                                                                rdfs:domain :NonconformanceRecord_Rel_NonconformanceDispositionFor_Part;
+                                                                rdfs:range :Part . 
+#  --------------------------- Property 187------------------------- 
+:NonconformanceRecord_Rel_NonconformanceDispositionFor_Part_In rdf:type owl:ObjectProperty ;
+                                                               rdfs:label "Nonconformance Disposition For"@en; 
+                                                               rdfs:domain :NonconformanceRecord;
+                                                               rdfs:range :NonconformanceRecord_Rel_NonconformanceDispositionFor_Part . 
+#  --------------------------- Property 188------------------------- 
+:Nonconformance_requires_ContainmentAnalysis rdf:type owl:ObjectProperty ;
+                                             rdfs:label "requires"@en; 
+                                             rdfs:domain :Nonconformance;
+                                             rdfs:range :Containment_Analysis . 
+#  --------------------------- Property 189------------------------- 
+:ContainmentAnalysis_identifiesImpacted_Airplane rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "identifies Impacted"@en; 
+                                                 rdfs:domain :Containment_Analysis;
+                                                 rdfs:range :Airplane . 
+#  --------------------------- Property 190------------------------- 
+:Nonconformance_has_ContainmentPlan rdf:type owl:ObjectProperty ;
+                                    rdfs:label "has"@en; 
+                                    rdfs:domain :Nonconformance;
+                                    rdfs:range :ContainmentPlan . 
+#  --------------------------- Property 191------------------------- 
+:ContainmentPlan_contains_ContainmentAction rdf:type owl:ObjectProperty ;
+                                            rdfs:label "contains"@en; 
+                                            rdfs:domain :ContainmentPlan;
+                                            rdfs:range :ContainmentAction . 
+#  --------------------------- Property 192------------------------- 
+:ContainmentPlan_enhances_ContainmentAnalysis rdf:type owl:ObjectProperty ;
+                                              rdfs:label "enhances"@en; 
+                                              rdfs:domain :ContainmentPlan;
+                                              rdfs:range :Containment_Analysis . 
+#  --------------------------- Property 193------------------------- 
+:ContainmentPlan_contains_ContainmentVerification rdf:type owl:ObjectProperty ;
+                                                  rdfs:label "contains"@en; 
+                                                  rdfs:domain :ContainmentPlan;
+                                                  rdfs:range :ContainmentVerification . 
+#  --------------------------- Property 194------------------------- 
+:ContainmentVerification_analyzesEffetivenessOf_ContainmentAction rdf:type owl:ObjectProperty ;
+                                                                  rdfs:label "analyzes Effectiveness Of"@en; 
+                                                                  rdfs:domain :ContainmentVerification;
+                                                                  rdfs:range :ContainmentAction . 
+#  --------------------------- Property 195------------------------- 
+:ContainmentAction_ensuresSafetyOf_Airplane rdf:type owl:ObjectProperty ;
+                                            rdfs:label "ensures Safety Of"@en; 
+                                            rdfs:domain :ContainmentAction;
+                                            rdfs:range :Airplane . 
+#  --------------------------- Property 196------------------------- 
+:NonConformanceRecord_controlsImpacted_ConfigurationInformation rdf:type owl:ObjectProperty ;
+                                                                rdfs:label "controls Impacted"@en; 
+                                                                rdfs:domain :NonconformanceRecord;
+                                                                rdfs:range :ConfigurationInformation . 
+#  --------------------------- Property 197------------------------- 
+:ContainmentActions_controlsImpacted_Part rdf:type owl:ObjectProperty ;
+                                          rdfs:label "controls Impacted"@en; 
+                                          rdfs:domain :ContainmentAction;
+                                          rdfs:range :Part . 
+#  --------------------------- Property 198------------------------- 
+:NonConformanceRecord_recordsDeviationFrom_PhysicaDesign rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "records Deviation From"@en; 
+                                                         rdfs:domain :NonconformanceRecord;
+                                                         rdfs:range :Physical_Design . 
+#  --------------------------- Property 199------------------------- 
+:ProductionIssue_convertsTo_Nonconformance rdf:type owl:ObjectProperty ;
+                                           rdfs:label "converts To"@en; 
+                                           rdfs:domain :ProductionIssue;
+                                           rdfs:range :Nonconformance . 
+#  --------------------------- Property 200------------------------- 
+:NonconformanceRecord_Re_NonconformanceDispositionFor_Part_compliesTo_Requirement rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:label "complies To"@en; 
+                                                                                  rdfs:domain :NonconformanceRecord_Rel_NonconformanceDispositionFor_Part;
+                                                                                  rdfs:range :Requirement . 
+#  --------------------------- Property 201------------------------- 
+:NonConformanceRecord_initiates_CorrectiveAction rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "initiates"@en; 
+                                                 rdfs:domain :NonconformanceRecord;
+                                                 rdfs:range :CorrectiveAction . 
+#  --------------------------- Property 202------------------------- 
+:ManufacturingCorrectiveAction_improvesPerformanceOf_ShopOrder rdf:type owl:ObjectProperty ;
+                                                               rdfs:label "improves Performance Of"@en; 
+                                                               rdfs:domain :ManufacturingCorrectiveAction;
+                                                               rdfs:range :ShopOrder . 
+#  --------------------------- Property 203------------------------- 
+:EngineeringCorretiveAction_initiates_ChangeOrder rdf:type owl:ObjectProperty ;
+                                                  rdfs:label "initiates"@en; 
+                                                  rdfs:domain :EngineeringCorrectiveAction;
+                                                  rdfs:range :Change_Order . 
+#  --------------------------- Property 204------------------------- 
+:ChangeOrder_authorizes_TypeDesignChange rdf:type owl:ObjectProperty ;
+                                         rdfs:label "authorizes"@en; 
+                                         rdfs:domain :Change_Order;
+                                         rdfs:range :TypeDesignChange . 
+#  --------------------------- Property 205------------------------- 
+:MajorMinor rdf:type owl:DatatypeProperty ;
+            rdfs:label "Major Minor"@en; 
+            rdfs:domain :TypeDesignChange;
+            rdfs:range rdfs:Literal . 
+#  --------------------------- Property 206------------------------- 
+:TypeDesignChange_definesChangeTo_PhysicaDesign rdf:type owl:ObjectProperty ;
+                                                rdfs:label "defines Change To"@en; 
+                                                rdfs:domain :TypeDesignChange;
+                                                rdfs:range :Physical_Design . 
+#  --------------------------- Property 207------------------------- 
+:NonconformanceRecord_defines_TypeDesignDeviation rdf:type owl:ObjectProperty ;
+                                                  rdfs:label "defines"@en; 
+                                                  rdfs:domain :NonconformanceRecord;
+                                                  rdfs:range :TypeDesignDeviation . 
+#  --------------------------- Property 208------------------------- 
+:CustomerSensitive rdf:type owl:DatatypeProperty ;
+                   rdfs:label "Customer Sensitive"@en; 
+                   rdfs:domain :NonconformanceRecord;
+                   rdfs:range rdfs:Literal . 
+#  --------------------------- Property 209------------------------- 
+:InstallationPlan_contains_InstallationOperationStep rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "contains"@en; 
+                                                     rdfs:domain :InstallationPlan;
+                                                     rdfs:range :InstallationPlanOperation . 
+#  --------------------------- Property 210------------------------- 
+:SpecificationControlDrawingRequirementsPackage_contains_SpecificationControlDrawingDocument rdf:type owl:ObjectProperty ;
+                                                                                             rdfs:label "contains"@en; 
+                                                                                             rdfs:domain :SpecificationControlDrawingRequirementsPackage;
+                                                                                             rdfs:range :SpecificationControlDrawingDocument . 
+#  --------------------------- Property 211------------------------- 
+:SupplierDataRequirementsList_tracks_SpecificationControlDrawingRequirementsPackage rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:label "tracks"@en; 
+                                                                                    rdfs:domain :SupplierDataRequirementsList;
+                                                                                    rdfs:range :SpecificationControlDrawingRequirementsPackage . 
+#  --------------------------- Property 212------------------------- 
+:SupplierDataRequirementsList_tracks_EngineeringAdministrativeAgreement rdf:type owl:ObjectProperty ;
+                                                                        rdfs:label "tracks"@en; 
+                                                                        rdfs:domain :SupplierDataRequirementsList;
+                                                                        rdfs:range :EngineeringAdministrativeAgreement . 
+#  --------------------------- Property 213------------------------- 
+:AirplaneSystemDescription_derivedFrom_LogicalSystem rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "derived From"@en; 
+                                                     rdfs:domain :FlightCrewOperationsManual;
+                                                     rdfs:range :LogicalSystem . 
+#  --------------------------- Property 214------------------------- 
+:AirplaneSystemDescription_derivedFrom_EquipmentInstallationArchitecture rdf:type owl:ObjectProperty ;
+                                                                         rdfs:label "derivedFrom"@en; 
+                                                                         rdfs:domain :FlightCrewOperationsManual;
+                                                                         rdfs:range :EquipmentInstallationArchitecture . 
+#  --------------------------- Property 215------------------------- 
+:SupportConfigurationInformation_specificFor_Airplane rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "specificFor"@en; 
+                                                      rdfs:domain :SupportConfigurationInformatinon;
+                                                      rdfs:range :Airplane . 
+#  --------------------------- Property 216------------------------- 
+:AirplaneNormalChecklist_derivedFrom_Function rdf:type owl:ObjectProperty ;
+                                              rdfs:label "derivedFrom"@en; 
+                                              rdfs:domain :AirplaneNormalChecklist;
+                                              rdfs:range :Function . 
+#  --------------------------- Property 217------------------------- 
+:AirplaneNormalChecklist_derivedFrom_OperatingCondition rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "derivedFrom"@en; 
+                                                        rdfs:domain :AirplaneNormalChecklist;
+                                                        rdfs:range :OperatingConditions . 
+#  --------------------------- Property 218------------------------- 
+:SafetyAssessmentAircraftMaintenance_performedPrior_PrepareTaskAircraftMaintenance rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:label "performed Prior"@en; 
+                                                                                   rdfs:domain :SafetyAssessmentAircraftMaintenance;
+                                                                                   rdfs:range :PrepareTaskAircraftMaintenance . 
+#  --------------------------- Property 219------------------------- 
+:SafetyAssessmentAircraftMaintenance_assesses_AirplaneOperatingCondition rdf:type owl:ObjectProperty ;
+                                                                         rdfs:label "assesses"@en; 
+                                                                         rdfs:domain :SafetyAssessmentAircraftMaintenance;
+                                                                         rdfs:range :Airplane_Operating_Condition . 
+#  --------------------------- Property 220------------------------- 
+:LogicalSystem_isAllocatedTo_AircraftMaintenanceManual rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "is Allocated To"@en; 
+                                                       rdfs:domain :LogicalSystem;
+                                                       rdfs:range :AircraftMaintananceManual . 
+#  --------------------------- Property 221------------------------- 
+:AircraftMaintenanceManual_complyTo_PhysicalDesign rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "comply To"@en; 
+                                                   rdfs:domain :AircraftMaintananceManual;
+                                                   rdfs:range :Physical_Design . 
+#  --------------------------- Property 222------------------------- 
+:AircraftMaintenanceManual_usesAsGuide_InstallationPlanfor rdf:type owl:ObjectProperty ;
+                                                           rdfs:label "uses As Guide"@en; 
+                                                           rdfs:domain :AircraftMaintananceManual;
+                                                           rdfs:range :InstallationPlan . 
+#  --------------------------- Property 223------------------------- 
+:SafetyAssessmentAircraftMaintenance_ensures_RestoreTaskAircraftMaintenance rdf:type owl:ObjectProperty ;
+                                                                            rdfs:label "ensures"@en; 
+                                                                            rdfs:domain :SafetyAssessmentAircraftMaintenance;
+                                                                            rdfs:range :RestoreTaskAircraftMaintenance . 
+#  --------------------------- Property 224------------------------- 
+:MaintenanceMessage_indicate_AirplaneFault rdf:type owl:ObjectProperty ;
+                                           rdfs:label "indicate"@en; 
+                                           rdfs:domain :MaintenanceMessage;
+                                           rdfs:range :AirplaneFault . 
+#  --------------------------- Property 225------------------------- 
+:FaultIsolationProcedure_troubleShoots_AirplaneFault rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "trouble shoots"@en; 
+                                                     rdfs:domain :FaultIsolationProcedure;
+                                                     rdfs:range :AirplaneFault . 
+#  --------------------------- Property 226------------------------- 
+:FaultIsolationProcedure_contains_FaultCorrectiveAction rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "contains"@en; 
+                                                        rdfs:domain :FaultIsolationProcedure;
+                                                        rdfs:range :FaultCorrectiveAction . 
+#  --------------------------- Property 227------------------------- 
+:FaultCorrectiveAction_references_AircraftMaintananceManual rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "references"@en; 
+                                                            rdfs:domain :FaultCorrectiveAction;
+                                                            rdfs:range :AircraftMaintananceManual . 
+#  --------------------------- Property 228------------------------- 
+:FaultIsolationProcedure_contains_FaultIsolationInitialEvaluation rdf:type owl:ObjectProperty ;
+                                                                  rdfs:label "contains"@en; 
+                                                                  rdfs:domain :FaultIsolationProcedure;
+                                                                  rdfs:range :FaultIsolationInitialEvaluation . 
+#  --------------------------- Property 229------------------------- 
+:FaultIsolatinoManual_correctsFaultsIn_LogicalSystem rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "corrects Faults In"@en; 
+                                                     rdfs:domain :FaultIsolationManual;
+                                                     rdfs:range :LogicalSystem . 
+#  --------------------------- Property 230------------------------- 
+:ObservedFault_references_Part rdf:type owl:ObjectProperty ;
+                               rdfs:label "references"@en; 
+                               rdfs:domain :ObservedFault;
+                               rdfs:range :Part . 
+#  --------------------------- Property 231------------------------- 
+:ShopOrderOperationStep_verifies_Part rdf:type owl:ObjectProperty ;
+                                      rdfs:label "verifies"@en; 
+                                      rdfs:domain :ShopOrderOperationStep;
+                                      rdfs:range :Part . 
+#  --------------------------- Property 232------------------------- 
+:Requirements_refines_Requirements rdf:type owl:ObjectProperty ;
+                                   rdfs:label "refines"@en; 
+                                   rdfs:domain :Requirement;
+                                   rdfs:range :Requirement . 
+#  --------------------------- Property 233------------------------- 
+:VVCase_evaluates_Rel_ConfigurationInformation_Satisfies_Requirement rdf:type owl:ObjectProperty ;
+                                                                     rdfs:label "evaluates"@en; 
+                                                                     rdfs:domain :VVCase;
+                                                                     rdfs:range :Rel_ConfigurationInformation_Satisfies_Requirement . 
+#  --------------------------- Property 234------------------------- 
+:FailureEfect_effects_FlightCrewAction rdf:type owl:ObjectProperty ;
+                                       rdfs:label "effects"@en; 
+                                       rdfs:domain :FailureEffect;
+                                       rdfs:range :FlightCrewAction . 
+#  --------------------------- Property 235------------------------- 
+:PartDesign_specifies_AllowableDamageLimits rdf:type owl:ObjectProperty ;
+                                            rdfs:label "specifies"@en; 
+                                            rdfs:domain :PartDesign;
+                                            rdfs:range :AllowableDamageLimits . 
+#  --------------------------- Property 236------------------------- 
+:PartDesign_specifies_RepairableDamageLimits rdf:type owl:ObjectProperty ;
+                                             rdfs:label "specifies"@en; 
+                                             rdfs:domain :PartDesign;
+                                             rdfs:range :RepairableDamageLimits . 
+#  --------------------------- Property 237------------------------- 
+:StructuralRepairManual_derived_AllowableDamageLimits rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "derived From"@en; 
+                                                      rdfs:domain :StructuralRepairManual;
+                                                      rdfs:range :AllowableDamageLimits . 
+#  --------------------------- Property 238------------------------- 
+:StructuralRepairManual_derived_RepairableDamageLimits rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "derived From"@en; 
+                                                       rdfs:domain :StructuralRepairManual;
+                                                       rdfs:range :RepairableDamageLimits . 
+#  --------------------------- Property 239------------------------- 
+:StructuralRepairManual_derivedFrom_PhysicalDesign rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "derived From"@en; 
+                                                   rdfs:domain :StructuralRepairManual;
+                                                   rdfs:range :Physical_Design . 
+#  --------------------------- Property 240------------------------- 
+:StructuralRepairProcedures_specifyRepairOf_StrcturalDamage rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "specify Repair Of"@en; 
+                                                            rdfs:domain :StructuralRepairProcedures;
+                                                            rdfs:range :StructuralDamage . 
+#  --------------------------- Property 241------------------------- 
+:StructuralDamaged_identifiedFrom_PhysicalDesign rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "identified From"@en; 
+                                                 rdfs:domain :StructuralDamage;
+                                                 rdfs:range :Physical_Design . 
+#  --------------------------- Property 242------------------------- 
+:MaterialMaster_defineLogisticPropertiesOf_Part rdf:type owl:ObjectProperty ;
+                                                rdfs:label "define Logistic Properties Of"@en; 
+                                                rdfs:domain :Material_Master;
+                                                rdfs:range :Part . 
+#  --------------------------- Property 243------------------------- 
+:VendorMaster_defines_Supplier rdf:type owl:ObjectProperty ;
+                               rdfs:label "defines"@en; 
+                               rdfs:domain :VendorMaster;
+                               rdfs:range :Supplier . 
+#  --------------------------- Property 244------------------------- 
+:StandardPartDefinition_supersession_StandardPartDefinition rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "supersession"@en; 
+                                                            rdfs:domain :StandardPartDefinition;
+                                                            rdfs:range :StandardPartDefinition . 
+#  --------------------------- Property 245------------------------- 
+:objectProperty_86309a17-f0c5-4893-8f2a-30c7ddb227dd rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "newObjectProperty"@en; 
+                                                     rdfs:domain :IllustratedPartsData;
+                                                     rdfs:range :Physical_Design . 
+#  --------------------------- Property 246------------------------- 
+:IllustratedPartData_identifies_AircraftMaintenanceManual rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "identifies"@en; 
+                                                          rdfs:domain :IllustratedPartsData;
+                                                          rdfs:range :AircraftMaintananceManual . 
+#  --------------------------- Property 247------------------------- 
+:AirraftMaintenanceManual_references_IllustratedPartData rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "references"@en; 
+                                                         rdfs:domain :AircraftMaintananceManual;
+                                                         rdfs:range :IllustratedPartsData . 
+#  --------------------------- Property 248------------------------- 
+:AirworthinessDirective_incorporates_ServiceBulletin rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "incorporates"@en; 
+                                                     rdfs:domain :AirworthinessDirective;
+                                                     rdfs:range :ServiceBulletin . 
+#  --------------------------- Property 249------------------------- 
+:IllustratedPartData_references_AirworthinessDirective rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "references"@en; 
+                                                       rdfs:domain :IllustratedPartsData;
+                                                       rdfs:range :AirworthinessDirective . 
+#  --------------------------- Property 250------------------------- 
+:PositioninAirplane rdf:type owl:DatatypeProperty ;
+                    rdfs:label "Position in Airplane"@en; 
+                    rdfs:domain :Rel_EngineeringInstallationBOM_specifiesInstallOf_PartDesign;
+                    rdfs:range rdfs:Literal . 
+#  --------------------------- Property 251------------------------- 
+:IllustratedPartsData_identifies_NonformanceRecord rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "identifies"@en; 
+                                                   rdfs:domain :IllustratedPartsData;
+                                                   rdfs:range :NonconformanceRecord . 
+#  --------------------------- Property 252------------------------- 
+:PartDesign_interchangeableWith_PartDesign rdf:type owl:ObjectProperty ;
+                                           rdfs:label "interchangeable with"@en; 
+                                           rdfs:domain :PartDesign;
+                                           rdfs:range :PartDesign . 
+#  --------------------------- Property 253------------------------- 
+:LogicalSystem_isAllocatedTo_SystemLayout rdf:type owl:ObjectProperty ;
+                                          rdfs:label "is Allocated To"@en; 
+                                          rdfs:domain :LogicalSystem;
+                                          rdfs:range :SystemLayout . 
+#  --------------------------- Property 254------------------------- 
+:EngineeringInstallation_defines_Installation rdf:type owl:ObjectProperty ;
+                                              rdfs:label "defines"@en; 
+                                              rdfs:domain :EngineeringInstallation;
+                                              rdfs:range :Installation . 
+#  --------------------------- Property 255------------------------- 
+:DesignNote_specifies_ProductStandardItem rdf:type owl:ObjectProperty ;
+                                          rdfs:label "specifies"@en; 
+                                          rdfs:domain :DesignNote;
+                                          rdfs:range :ProductStandardItem . 
+#  --------------------------- Property 256------------------------- 
+:DesignNote_specifies_ProductStandard rdf:type owl:ObjectProperty ;
+                                      rdfs:label "specifies"@en; 
+                                      rdfs:domain :DesignNote;
+                                      rdfs:range :ProductStandard . 
+#  --------------------------- Property 257------------------------- 
+:DesignNote_isAppliedAs_FlagNote rdf:type owl:ObjectProperty ;
+                                 rdfs:label "is Applied As"@en; 
+                                 rdfs:domain :DesignNote;
+                                 rdfs:range :FlagNote . 
+#  --------------------------- Property 258------------------------- 
+:LogicalSystemOccurrence_has_LogicalSystemPortOccurrence rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "has"@en; 
+                                                         rdfs:domain :LogicalSystemOccurrence;
+                                                         rdfs:range :LogicalSystemPortOccurrence . 
+#  --------------------------- Property 259------------------------- 
+:LogicalSystemPortOccurrence_references_LogicalSystemPort rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "references"@en; 
+                                                          rdfs:domain :LogicalSystemPortOccurrence;
+                                                          rdfs:range :LogicalSystemPort . 
+#  --------------------------- Property 260------------------------- 
+:DesignNote_isAppliedAs_GeneralNote rdf:type owl:ObjectProperty ;
+                                    rdfs:label "is Applied As"@en; 
+                                    rdfs:domain :DesignNote;
+                                    rdfs:range :GeneralNote . 
+#  --------------------------- Property 261------------------------- 
+:PartDesignCAD_Specifies_FlagNote rdf:type owl:ObjectProperty ;
+                                  rdfs:label "specifies"@en; 
+                                  rdfs:domain :PartDesignCAD;
+                                  rdfs:range :FlagNote . 
+#  --------------------------- Property 262------------------------- 
+:PartDesignBOM_specifies_GeneralNote rdf:type owl:ObjectProperty ;
+                                     rdfs:label "specifies"@en; 
+                                     rdfs:domain :PartDesignBOM;
+                                     rdfs:range :GeneralNote . 
+#  --------------------------- Property 263------------------------- 
+:Rel_EngineeringInstallationBOM_specifiesInstallOf_PartDesign_specifies_GeneralNote rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:label "specifies"@en; 
+                                                                                    rdfs:domain :Rel_EngineeringInstallationBOM_specifiesInstallOf_PartDesign;
+                                                                                    rdfs:range :GeneralNote . 
+#  --------------------------- Property 264------------------------- 
+:FiringOrder_authorizes_MasterProductionSchedule rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "authorizes"@en; 
+                                                 rdfs:domain :AirplaneFiringOrder;
+                                                 rdfs:range :MasterProductionSchedule . 
+#  --------------------------- Property 265------------------------- 
+:ProcessPlanOperation_uses_ProductionConsumables rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "uses"@en; 
+                                                 rdfs:domain :ProcessPlanOperation;
+                                                 rdfs:range :ProductionConsumables . 
+#  --------------------------- Property 266------------------------- 
+:ProcessSpecifications_specify_ProductionConsumables rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "specify"@en; 
+                                                     rdfs:domain :ProcessSpecification;
+                                                     rdfs:range :ProductionConsumables . 
+#  --------------------------- Property 267------------------------- 
+:WorkCenter_decomposes_WorkCenter rdf:type owl:ObjectProperty ;
+                                  rdfs:label "decomposes"@en; 
+                                  rdfs:domain :WorkCenter;
+                                  rdfs:range :WorkCenter . 
+#  --------------------------- Property 268------------------------- 
+:MasterProductionSchedule_authorizes_DetailedProductionSchedule rdf:type owl:ObjectProperty ;
+                                                                rdfs:label "authorizes"@en; 
+                                                                rdfs:domain :MasterProductionSchedule;
+                                                                rdfs:range :DetailedProductionSchedule . 
+#  --------------------------- Property 269------------------------- 
+:MasterProductionSchedule_specifiesLoadDate_AreaControlCode rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "specifies Load Date"@en; 
+                                                            rdfs:domain :MasterProductionSchedule;
+                                                            rdfs:range :AreaControlCode . 
+#  --------------------------- Property 270------------------------- 
+:ProductionAssetInstance_isLocatedAt_WorkCenter rdf:type owl:ObjectProperty ;
+                                                rdfs:label "is Located At"@en; 
+                                                rdfs:domain :ProductionAssetInstance;
+                                                rdfs:range :WorkCenter . 
+#  --------------------------- Property 271------------------------- 
+:LayupMandrel_definesShapeOf_Part rdf:type owl:ObjectProperty ;
+                                  rdfs:label "defines Shape Of"@en; 
+                                  rdfs:domain :LayupMandrel;
+                                  rdfs:range :Part . 
+#  --------------------------- Property 272------------------------- 
+:ProcessPlanOperation_requiresUseOf_ProductionAsset rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "requires Use Of"@en; 
+                                                    rdfs:domain :ProcessPlanOperation;
+                                                    rdfs:range :ProductionAsset . 
+#  --------------------------- Property 273------------------------- 
+:ProcessSpecification_identifies_EmployeeCertification rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "identifies"@en; 
+                                                       rdfs:domain :ProcessSpecification;
+                                                       rdfs:range :EmployeeCertification . 
+#  --------------------------- Property 274------------------------- 
+:ProcessPlanOperation_requires_EmployeeCertification rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "requires"@en; 
+                                                     rdfs:domain :ProcessPlanOperation;
+                                                     rdfs:range :EmployeeCertification . 
+#  --------------------------- Property 275------------------------- 
+:ProductionAssetInstance_isUnitOf_ProductionAsset rdf:type owl:ObjectProperty ;
+                                                  rdfs:label "is Unit Of"@en; 
+                                                  rdfs:domain :ProductionAssetInstance;
+                                                  rdfs:range :ProductionAsset . 
+#  --------------------------- Property 276------------------------- 
+:ProductionAssetInstance_has_EquipmentMaster rdf:type owl:ObjectProperty ;
+                                             rdfs:label "has"@en; 
+                                             rdfs:domain :ProductionAssetInstance;
+                                             rdfs:range :EquipmentMaster . 
+#  --------------------------- Property 277------------------------- 
+:ShopOrder_contains_ShopOrderOperation rdf:type owl:ObjectProperty ;
+                                       rdfs:label "contains"@en; 
+                                       rdfs:domain :ShopOrder;
+                                       rdfs:range :ShopOrderOperation . 
+#  --------------------------- Property 278------------------------- 
+:ShopOrderOperation_contains_ShopOrderOperationStep rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "contains"@en; 
+                                                    rdfs:domain :ShopOrderOperation;
+                                                    rdfs:range :ShopOrderOperationStep . 
+#  --------------------------- Property 279------------------------- 
+:ShopOrderOperation_requires_ProductionAssetInstance rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "requires"@en; 
+                                                     rdfs:domain :ShopOrderOperation;
+                                                     rdfs:range :ProductionAssetInstance . 
+#  --------------------------- Property 280------------------------- 
+:ShopOrderOperationStep_executes_ProcessPlanOperationStep rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "executes"@en; 
+                                                          rdfs:domain :ShopOrderOperationStep;
+                                                          rdfs:range :ProcessPlanOperationStep . 
+#  --------------------------- Property 281------------------------- 
+:Employee_has_EmployeeCertification rdf:type owl:ObjectProperty ;
+                                    rdfs:label "has"@en; 
+                                    rdfs:domain :Employee;
+                                    rdfs:range :EmployeeCertification . 
+#  --------------------------- Property 282------------------------- 
+:Employee_performs_ShopOrderOperationStep rdf:type owl:ObjectProperty ;
+                                          rdfs:label "performs"@en; 
+                                          rdfs:domain :Employee;
+                                          rdfs:range :ShopOrderOperationStep . 
+#  --------------------------- Property 283------------------------- 
+:PartDesign_determines_LayupMandrel rdf:type owl:ObjectProperty ;
+                                    rdfs:label "determines"@en; 
+                                    rdfs:domain :PartDesign;
+                                    rdfs:range :LayupMandrel . 
+#  --------------------------- Property 284------------------------- 
+:PartDesign_determines_MachineControlData rdf:type owl:ObjectProperty ;
+                                          rdfs:label "determines"@en; 
+                                          rdfs:domain :PartDesign;
+                                          rdfs:range :MachineControlData . 
+#  --------------------------- Property 285------------------------- 
+:MachineControlData_executesOn_ProductionAssetInstance rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "newObjectProperty"@en; 
+                                                       rdfs:domain :MachineControlData;
+                                                       rdfs:range :ProductionAssetInstance . 
+#  --------------------------- Property 286------------------------- 
+:StandardPartDefinition_has_StandardPartDesign rdf:type owl:ObjectProperty ;
+                                               rdfs:label "has"@en; 
+                                               rdfs:domain :StandardPartDefinition;
+                                               rdfs:range :StandardPartDesign . 
+#  --------------------------- Property 287------------------------- 
+:AssemblyDesign_defines_Assembly rdf:type owl:ObjectProperty ;
+                                 rdfs:label "defines"@en; 
+                                 rdfs:domain :AssemblyDesign;
+                                 rdfs:range :Assembly . 
+#  --------------------------- Property 288------------------------- 
+:TransportElementDesign_isAccountableTo_PathwayArchitecture rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "is Accountable To"@en; 
+                                                            rdfs:domain :TransportElementDesign;
+                                                            rdfs:range :PathwayArchitecture . 
+#  --------------------------- Property 289------------------------- 
+:ProcessPlan_isAccoutableTo_PartDesign rdf:type owl:ObjectProperty ;
+                                       rdfs:label "is Accountable To"@en; 
+                                       rdfs:domain :ProcessPlan;
+                                       rdfs:range :PartDesign . 
+#  --------------------------- Property 290------------------------- 
+:AssemblyDesign_Rel_specifiesAssemblyOf_PartDesign_requires_ProductStandard rdf:type owl:ObjectProperty ;
+                                                                            rdfs:label "requires"@en; 
+                                                                            rdfs:domain :AssemblyDesign_Rel_specifiesAssemblyOf_PartDesign;
+                                                                            rdfs:range :ProductStandard . 
+#  --------------------------- Property 291------------------------- 
+:Change_appliesTo_Airplane rdf:type owl:ObjectProperty ;
+                           rdfs:label "applies To"@en; 
+                           rdfs:domain :Change;
+                           rdfs:range :Airplane . 
+#  --------------------------- Property 292------------------------- 
+:LayoutOfPassengerAccommodation_contains_LocalizedCustomerOption rdf:type owl:ObjectProperty ;
+                                                                 rdfs:label "contains"@en; 
+                                                                 rdfs:domain :LayoutOfPassengerAccommodation;
+                                                                 rdfs:range :LocalizedCustomerOption . 
+#  --------------------------- Property 293------------------------- 
+:LifeCycleState rdf:type owl:DatatypeProperty ;
+                rdfs:label "Life Cycle State"@en; 
+                rdfs:domain :ConfigurationInformation;
+                rdfs:range rdfs:Literal . 
+#  --------------------------- Property 294------------------------- 
+:specifiesLocationInAssembly rdf:type owl:DatatypeProperty ;
+                             rdfs:label "specifies Location in Assembly"@en; 
+                             rdfs:domain :AssemblyDesign_Rel_specifiesAssemblyOf_PartDesign;
+                             rdfs:range rdfs:Literal . 
+#  --------------------------- Property 295------------------------- 
+:MasterBundleNetwork_uses_PathwayArchitecture rdf:type owl:ObjectProperty ;
+                                              rdfs:label "uses"@en; 
+                                              rdfs:domain :MasterBundleNetwork;
+                                              rdfs:range :PathwayArchitecture . 
+#  --------------------------- Property 296------------------------- 
+:SystemPinToPinDesign_drives_SystemWiringDesign_In rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "drives"@en; 
+                                                   rdfs:domain :SystemPinToPinDesign;
+                                                   rdfs:range :Rel_SystemPinToPinDesign_drives_SystemWiringDesign . 
+#  --------------------------- Property 297------------------------- 
+:SystemPinToPinDesign_drives_SystemWiringDesign_Out rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "drives"@en; 
+                                                    rdfs:domain :Rel_SystemPinToPinDesign_drives_SystemWiringDesign;
+                                                    rdfs:range :SystemWiringDesign . 
+#  --------------------------- Property 298------------------------- 
+:SystemPinToPinDesign_drives_SystemWiringDesign_uses_MasterBundleNetwork rdf:type owl:ObjectProperty ;
+                                                                         rdfs:label "uses"@en; 
+                                                                         rdfs:domain :Rel_SystemPinToPinDesign_drives_SystemWiringDesign;
+                                                                         rdfs:range :MasterBundleNetwork . 
+#  --------------------------- Property 299------------------------- 
+:SpecificationControlDrawingDocument_uses_ConfigurationInformation rdf:type owl:ObjectProperty ;
+                                                                   rdfs:label "uses"@en; 
+                                                                   rdfs:domain :SpecificationControlDrawingDocument;
+                                                                   rdfs:range :ConfigurationInformation . 
+#  --------------------------- Property 300------------------------- 
+:WiringDiagram_publishes_WiringBundleDesign rdf:type owl:ObjectProperty ;
+                                            rdfs:label "publishes"@en; 
+                                            rdfs:domain :WiringDiagram;
+                                            rdfs:range :WireBundleDesign . 
+###  Class Definitions (Number of Classes) 259 ###
+#  --------------------------- Class  0------------------------- 
+:FunctionArchitecture rdf:type owl:Class; 
+                      rdfs:subClassOf :ConfigurationInformation ;
+                      rdfs:label "Function Architecture"@en . 
+#  --------------------------- Class  1------------------------- 
+:Requirement rdf:type owl:Class; 
+             rdfs:subClassOf :ConfigurationInformation ;
+             rdfs:label "Requirement"@en . 
+#  --------------------------- Class  2------------------------- 
+:ConfigurationInformation rdf:type owl:Class; 
+                          rdfs:label "Configuration Information"@en . 
+#  --------------------------- Class  3------------------------- 
+:Function rdf:type owl:Class; 
+          rdfs:subClassOf :FunctionArchitecture ;
+          rdfs:label "Function"@en . 
+#  --------------------------- Class  4------------------------- 
+:LogicGate rdf:type owl:Class; 
+           rdfs:subClassOf :FunctionArchitecture ;
+           rdfs:label "Logic Gate"@en . 
+#  --------------------------- Class  5------------------------- 
+:FunctionPort rdf:type owl:Class; 
+              rdfs:label "Function Port"@en . 
+#  --------------------------- Class  6------------------------- 
+:FunctionInputFlow rdf:type owl:Class; 
+                   rdfs:subClassOf :FunctionInterface ;
+                   rdfs:label "Function Input Flow"@en . 
+#  --------------------------- Class  7------------------------- 
+:FunctionOutputFLow rdf:type owl:Class; 
+                    rdfs:subClassOf :FunctionInterface ;
+                    rdfs:label "Function Output FLow"@en . 
+#  --------------------------- Class  8------------------------- 
+:FunctionControl rdf:type owl:Class; 
+                 rdfs:subClassOf :FunctionInterface ;
+                 rdfs:label "Function Control"@en . 
+#  --------------------------- Class  9------------------------- 
+:FunctionInterface rdf:type owl:Class; 
+                   rdfs:subClassOf :FunctionArchitecture ;
+                   rdfs:label "Function Interface"@en . 
+#  --------------------------- Class  10------------------------- 
+:FailureCondition rdf:type owl:Class; 
+                  rdfs:label "Failure Condition"@en . 
+#  --------------------------- Class  11------------------------- 
+:FunctionalHazardAssessment rdf:type owl:Class; 
+                            rdfs:label "Functional Hazard Assessment"@en . 
+#  --------------------------- Class  12------------------------- 
+:LogicalSystemArchitecture rdf:type owl:Class; 
+                           rdfs:subClassOf :ConfigurationInformation ;
+                           rdfs:label "Logical System Architecture"@en . 
+#  --------------------------- Class  13------------------------- 
+:LogicalSystem rdf:type owl:Class; 
+               rdfs:subClassOf :LogicalSystemArchitecture ;
+               rdfs:label "Logical System"@en . 
+#  --------------------------- Class  14------------------------- 
+:LogicalSystemInterface rdf:type owl:Class; 
+                        rdfs:subClassOf :LogicalSystemArchitecture ;
+                        rdfs:label "Logical System Interface"@en . 
+#  --------------------------- Class  15------------------------- 
+:LogicalSystemOccurrence rdf:type owl:Class; 
+                         rdfs:label "Logical System Occurrence"@en . 
+#  --------------------------- Class  16------------------------- 
+:Rel_Requirement_IsAllocatedTo_ConfigurationInformation rdf:type owl:Class; 
+                                                        rdfs:label "Rel: Is Allocated To"@en . 
+#  --------------------------- Class  17------------------------- 
+:Rel_ConfigurationInformation_Satisfies_Requirement rdf:type owl:Class; 
+                                                    rdfs:label "Rel: satisfies"@en . 
+#  --------------------------- Class  18------------------------- 
+:FunctionalRequirements rdf:type owl:Class; 
+                        rdfs:subClassOf :Requirement ;
+                        rdfs:label "Functional Requirements"@en . 
+#  --------------------------- Class  19------------------------- 
+:OperatingConditions rdf:type owl:Class; 
+                     rdfs:label "Operating Conditions"@en . 
+#  --------------------------- Class  20------------------------- 
+:AirplaneOperatingEnvelope rdf:type owl:Class; 
+                           rdfs:subClassOf :OperatingConditions ;
+                           rdfs:label "Airplane Operating Envelope"@en . 
+#  --------------------------- Class  21------------------------- 
+:Airplane_Operating_Environment rdf:type owl:Class; 
+                                rdfs:subClassOf :OperatingConditions ;
+                                rdfs:label "Airplane Operating Environment"@en . 
+#  --------------------------- Class  22------------------------- 
+:FailureEffect rdf:type owl:Class; 
+               rdfs:label "Failure Effect"@en . 
+#  --------------------------- Class  23------------------------- 
+:FlightCrewAction rdf:type owl:Class; 
+                  rdfs:label "Flight Crew Action"@en . 
+#  --------------------------- Class  24------------------------- 
+:Rel_FunctionalHazardAssessment_expected_FlightCrewAction rdf:type owl:Class; 
+                                                          rdfs:label "Rel: expected"@en . 
+#  --------------------------- Class  25------------------------- 
+:FailureEffectSubstantiation rdf:type owl:Class; 
+                             rdfs:label "Failure Effect Substantiation"@en . 
+#  --------------------------- Class  26------------------------- 
+:VerificationApproach rdf:type owl:Class; 
+                      rdfs:label "Verification Approach"@en . 
+#  --------------------------- Class  27------------------------- 
+:Rel_NatureOfFailureConditionForFunction rdf:type owl:Class; 
+                                         rdfs:label "Rel Nature Of Failure Condition For Function"@en . 
+#  --------------------------- Class  28------------------------- 
+:FlightCrew rdf:type owl:Class; 
+            rdfs:label "Flight Crew"@en . 
+#  --------------------------- Class  29------------------------- 
+:Rel_FlightCrewAwareness rdf:type owl:Class; 
+                         rdfs:label "Rel: Flight Crew Awareness"@en . 
+#  --------------------------- Class  30------------------------- 
+:Airplane rdf:type owl:Class; 
+          rdfs:label "Airplane"@en . 
+#  --------------------------- Class  31------------------------- 
+:AirplaneOccupants rdf:type owl:Class; 
+                   rdfs:label "Airplane Occupants"@en . 
+#  --------------------------- Class  32------------------------- 
+:LogicalSystemPort rdf:type owl:Class; 
+                   rdfs:label "Logical  System Port"@en . 
+#  --------------------------- Class  33------------------------- 
+:Rel_LogicalSystemInterface_connects_LogicalSystemPort rdf:type owl:Class; 
+                                                       rdfs:label "Rel: connects"@en . 
+#  --------------------------- Class  34------------------------- 
+:Physical_Design rdf:type owl:Class; 
+                 rdfs:subClassOf :ConfigurationInformation ;
+                 rdfs:label "Physical Design"@en . 
+#  --------------------------- Class  35------------------------- 
+:ProductDesign rdf:type owl:Class; 
+               rdfs:subClassOf :Physical_Design ;
+               rdfs:label "Product Design"@en . 
+#  --------------------------- Class  36------------------------- 
+:MinorModelDesogn rdf:type owl:Class; 
+                  rdfs:subClassOf :Physical_Design ;
+                  rdfs:label "Minor Model Design"@en . 
+#  --------------------------- Class  37------------------------- 
+:Rel_ProductDesign_decomposes_MinorModelDesign rdf:type owl:Class; 
+                                               rdfs:label "Rel: decomposes"@en . 
+#  --------------------------- Class  38------------------------- 
+:CollectorProductDesign rdf:type owl:Class; 
+                        rdfs:subClassOf :Physical_Design ;
+                        rdfs:label "Collector Product Design"@en . 
+#  --------------------------- Class  39------------------------- 
+:Rel_MinorModelDesign_decomposes_CollectorProductDesign rdf:type owl:Class; 
+                                                        rdfs:label "Rel: decomposes"@en . 
+#  --------------------------- Class  40------------------------- 
+:EngineeringInstallation rdf:type owl:Class; 
+                         rdfs:subClassOf :PartDesign ;
+                         rdfs:label "Engineering Installation"@en . 
+#  --------------------------- Class  41------------------------- 
+:Rel_CollectorProductDesign_contains_EngineeringInstallation rdf:type owl:Class; 
+                                                             rdfs:label "Rel: contains"@en . 
+#  --------------------------- Class  42------------------------- 
+:OptionCombination rdf:type owl:Class; 
+                   rdfs:label "Option Combination"@en . 
+#  --------------------------- Class  43------------------------- 
+:Change_Action rdf:type owl:Class; 
+               rdfs:subClassOf :Change ;
+               rdfs:label "Change Action"@en . 
+#  --------------------------- Class  44------------------------- 
+:Change_Order rdf:type owl:Class; 
+              rdfs:subClassOf :Change ;
+              rdfs:label "Change Order"@en . 
+#  --------------------------- Class  45------------------------- 
+:NewClass rdf:type owl:Class; 
+          rdfs:subClassOf :Change ;
+          rdfs:label "Change Request"@en . 
+#  --------------------------- Class  46------------------------- 
+:Change_Impact_Analysis rdf:type owl:Class; 
+                        rdfs:subClassOf :Change ;
+                        rdfs:label "Change Impact Analysis"@en . 
+#  --------------------------- Class  47------------------------- 
+:Change_Statement_of_Work rdf:type owl:Class; 
+                          rdfs:subClassOf :Change ;
+                          rdfs:label "Change Statement of Work"@en . 
+#  --------------------------- Class  48------------------------- 
+:CustomerOption rdf:type owl:Class; 
+                rdfs:subClassOf :CustomerRequirements ;
+                rdfs:label "Customer Option"@en . 
+#  --------------------------- Class  49------------------------- 
+:LocalizedCustomerOption rdf:type owl:Class; 
+                         rdfs:subClassOf :CustomerOption ;
+                         rdfs:label "Localized Customer Option"@en . 
+#  --------------------------- Class  50------------------------- 
+:NonLocalizedCustomerOption rdf:type owl:Class; 
+                            rdfs:subClassOf :CustomerOption ;
+                            rdfs:label "Non Localized Customer Option"@en . 
+#  --------------------------- Class  51------------------------- 
+:CustomerSpecificOptionSelection rdf:type owl:Class; 
+                                 rdfs:subClassOf :ConfigurationInformation ;
+                                 rdfs:label "Customer Specific Option Selection"@en . 
+#  --------------------------- Class  52------------------------- 
+:Attributable_Customer_Option rdf:type owl:Class; 
+                              rdfs:subClassOf :CustomerOption ;
+                              rdfs:label "Attributable Customer Option"@en . 
+#  --------------------------- Class  53------------------------- 
+:ProductionCustomerSpecificOptionSelection rdf:type owl:Class; 
+                                           rdfs:subClassOf :CustomerSpecificOptionSelection ;
+                                           rdfs:label "Production Customer Specific Option Selection"@en . 
+#  --------------------------- Class  54------------------------- 
+:AllocatedProductionAirplane rdf:type owl:Class; 
+                             rdfs:subClassOf :Airplane ;
+                             rdfs:label "Allocated Production Airplane"@en . 
+#  --------------------------- Class  55------------------------- 
+:AirplaneFiringOrderSlot rdf:type owl:Class; 
+                         rdfs:label "Airplane Firing Order Slot"@en . 
+#  --------------------------- Class  56------------------------- 
+:SkylinePosition rdf:type owl:Class; 
+                 rdfs:label "Skyline Position"@en . 
+#  --------------------------- Class  57------------------------- 
+:ContractualParts rdf:type owl:Class; 
+                  rdfs:label "Contractual Parts"@en . 
+#  --------------------------- Class  58------------------------- 
+:AirplaneFiringOrder rdf:type owl:Class; 
+                     rdfs:label "Airplane Firing Order"@en . 
+#  --------------------------- Class  59------------------------- 
+:ProductionLocation rdf:type owl:Class; 
+                    rdfs:label "Production Location"@en . 
+#  --------------------------- Class  60------------------------- 
+:Skyline rdf:type owl:Class; 
+         rdfs:label "Skyline"@en . 
+#  --------------------------- Class  61------------------------- 
+:AcquisitionAirplane rdf:type owl:Class; 
+                     rdfs:subClassOf :Airplane ;
+                     rdfs:label "Acquisition Airplane"@en . 
+#  --------------------------- Class  62------------------------- 
+:AcquisitionCustomerSpecificOptionSelection rdf:type owl:Class; 
+                                            rdfs:subClassOf :CustomerSpecificOptionSelection ;
+                                            rdfs:label "Acquisition Customer Specific Option Selection"@en . 
+#  --------------------------- Class  63------------------------- 
+:SellerFurnishedEquipment rdf:type owl:Class; 
+                          rdfs:subClassOf :ContractualParts ;
+                          rdfs:label "Seller Furnished Equipment"@en . 
+#  --------------------------- Class  64------------------------- 
+:SafetyRequirements rdf:type owl:Class; 
+                    rdfs:subClassOf :Requirement ;
+                    rdfs:label "Safety Requirements"@en . 
+#  --------------------------- Class  65------------------------- 
+:OperationalRequirements rdf:type owl:Class; 
+                         rdfs:subClassOf :Requirement ;
+                         rdfs:label "Operational Requirements"@en . 
+#  --------------------------- Class  66------------------------- 
+:CustomerRequirements rdf:type owl:Class; 
+                      rdfs:subClassOf :Requirement ;
+                      rdfs:label "Customer Requirements"@en . 
+#  --------------------------- Class  67------------------------- 
+:PerformanceRequirements rdf:type owl:Class; 
+                         rdfs:subClassOf :Requirement ;
+                         rdfs:label "Performance Requirements"@en . 
+#  --------------------------- Class  68------------------------- 
+:PhysicalRequirements rdf:type owl:Class; 
+                      rdfs:subClassOf :Requirement ;
+                      rdfs:label "Physical Requirements"@en . 
+#  --------------------------- Class  69------------------------- 
+:InstallationRequirements rdf:type owl:Class; 
+                          rdfs:subClassOf :Requirement ;
+                          rdfs:label "Installation Requirements"@en . 
+#  --------------------------- Class  70------------------------- 
+:MaintainabilityRequirements rdf:type owl:Class; 
+                             rdfs:subClassOf :Requirement ;
+                             rdfs:label "Maintainability Requirements"@en . 
+#  --------------------------- Class  71------------------------- 
+:Interface_Requirements rdf:type owl:Class; 
+                        rdfs:subClassOf :Requirement ;
+                        rdfs:label "Interface Requirements"@en . 
+#  --------------------------- Class  72------------------------- 
+:CertificationRequirements rdf:type owl:Class; 
+                           rdfs:subClassOf :Requirement ;
+                           rdfs:label "Certification Requirements"@en . 
+#  --------------------------- Class  73------------------------- 
+:LogicalElement rdf:type owl:Class; 
+                rdfs:subClassOf :LogicalSystem ;
+                rdfs:label "Logical Element"@en . 
+#  --------------------------- Class  74------------------------- 
+:LogicalAssembly rdf:type owl:Class; 
+                 rdfs:subClassOf :LogicalSystem ;
+                 rdfs:label "Logical Assembly"@en . 
+#  --------------------------- Class  75------------------------- 
+:LogicalInstallation rdf:type owl:Class; 
+                     rdfs:subClassOf :LogicalSystem ;
+                     rdfs:label "Logical Installation"@en . 
+#  --------------------------- Class  76------------------------- 
+:ElementConstraints rdf:type owl:Class; 
+                    rdfs:label "Element Constraints"@en . 
+#  --------------------------- Class  77------------------------- 
+:SpecificationControlDrawingDocument rdf:type owl:Class; 
+                                     rdfs:label "Specification Control Drawing Document"@en . 
+#  --------------------------- Class  78------------------------- 
+:SystemEquipmentInstallationSpecification rdf:type owl:Class; 
+                                          rdfs:label "System Equipment Installation Specification"@en . 
+#  --------------------------- Class  79------------------------- 
+:SpaceReservation rdf:type owl:Class; 
+                  rdfs:subClassOf :Physical_Design ;
+                  rdfs:label "Space Reservation"@en . 
+#  --------------------------- Class  80------------------------- 
+:InterfaceControlModel rdf:type owl:Class; 
+                       rdfs:subClassOf :MasterGeometry ;
+                       rdfs:label "Interface Control Model"@en . 
+#  --------------------------- Class  81------------------------- 
+:PartDesign rdf:type owl:Class; 
+            rdfs:subClassOf :Physical_Design ;
+            rdfs:subClassOf :Type_Design ;
+            rdfs:label "Part Design"@en . 
+#  --------------------------- Class  82------------------------- 
+:TransportElementDesign rdf:type owl:Class; 
+                        rdfs:subClassOf :PartDesign ;
+                        rdfs:label "Transport Element Design"@en . 
+#  --------------------------- Class  83------------------------- 
+:TransportElementSpecification rdf:type owl:Class; 
+                               rdfs:label "Transport Element Specification"@en . 
+#  --------------------------- Class  84------------------------- 
+:TransportElementAnalysis rdf:type owl:Class; 
+                          rdfs:label "Transport Element Analysis"@en . 
+#  --------------------------- Class  85------------------------- 
+:MechanicalTransportElementSizingAnalysis_ rdf:type owl:Class; 
+                                           rdfs:subClassOf :TransportElementAnalysis ;
+                                           rdfs:label "Mechanical Transport Element Sizing Analysis "@en . 
+#  --------------------------- Class  86------------------------- 
+:LogicalSystemSchematics rdf:type owl:Class; 
+                         rdfs:label "Logical System Schematics"@en . 
+#  --------------------------- Class  87------------------------- 
+:2DSchematics rdf:type owl:Class; 
+              rdfs:subClassOf :LogicalSystemSchematics ;
+              rdfs:label "2D Schematics"@en . 
+#  --------------------------- Class  88------------------------- 
+:LogicalSystemBlockDiagram rdf:type owl:Class; 
+                           rdfs:subClassOf :LogicalSystemSchematics ;
+                           rdfs:label "Logical System Block Diagram"@en . 
+#  --------------------------- Class  89------------------------- 
+:WiringDiagram rdf:type owl:Class; 
+               rdfs:label "Wiring Diagram"@en . 
+#  --------------------------- Class  90------------------------- 
+:SystemPinToPinDesign rdf:type owl:Class; 
+                      rdfs:label "System Pin To Pin Design"@en . 
+#  --------------------------- Class  91------------------------- 
+:SystemWiringDesign rdf:type owl:Class; 
+                    rdfs:label "System Wiring Design"@en . 
+#  --------------------------- Class  92------------------------- 
+:PathwayArchitecture rdf:type owl:Class; 
+                     rdfs:label "Pathway Architecture"@en . 
+#  --------------------------- Class  93------------------------- 
+:WiringInstallationArchitecture rdf:type owl:Class; 
+                                rdfs:subClassOf :Physical_Design ;
+                                rdfs:label "Wiring Installation Architecture"@en . 
+#  --------------------------- Class  94------------------------- 
+:WireInstallationDetailDesign rdf:type owl:Class; 
+                              rdfs:subClassOf :EngineeringInstallation ;
+                              rdfs:label "Wire Installation Detail Design"@en . 
+#  --------------------------- Class  95------------------------- 
+:WireBundleDesign rdf:type owl:Class; 
+                  rdfs:subClassOf :TransportElementDesign ;
+                  rdfs:label "Wire Bundle Design"@en . 
+#  --------------------------- Class  96------------------------- 
+:PathwaySpaceReservation rdf:type owl:Class; 
+                         rdfs:subClassOf :SpaceReservation ;
+                         rdfs:label "Pathway Space Reservation"@en . 
+#  --------------------------- Class  97------------------------- 
+:EquipmentSpaceReservation rdf:type owl:Class; 
+                           rdfs:subClassOf :SpaceReservation ;
+                           rdfs:label "Equipment Space Reservation"@en . 
+#  --------------------------- Class  98------------------------- 
+:LogicalWireBundle rdf:type owl:Class; 
+                   rdfs:label "Logical Wire Bundle"@en . 
+#  --------------------------- Class  99------------------------- 
+:SystemLayout rdf:type owl:Class; 
+              rdfs:subClassOf :Physical_Design ;
+              rdfs:subClassOf :PhysicalLayoutDesign ;
+              rdfs:label "System Layout"@en . 
+#  --------------------------- Class  100------------------------- 
+:EquipmentList rdf:type owl:Class; 
+               rdfs:label "Equipment List"@en . 
+#  --------------------------- Class  101------------------------- 
+:EquipmentInstallationArchitecture rdf:type owl:Class; 
+                                   rdfs:subClassOf :Physical_Design ;
+                                   rdfs:label "Equipment Installation Architecture"@en . 
+#  --------------------------- Class  102------------------------- 
+:EngineeringInstallationCAD rdf:type owl:Class; 
+                            rdfs:subClassOf :EngineeringInstallation ;
+                            rdfs:label "Engineering Installation CAD"@en . 
+#  --------------------------- Class  103------------------------- 
+:EngineeringInstallationBOM rdf:type owl:Class; 
+                            rdfs:subClassOf :EngineeringInstallation ;
+                            rdfs:label "Engineering Installation BOM"@en . 
+#  --------------------------- Class  104------------------------- 
+:Rel_EngineeringInstallationBOM_specifiesInstallOf_PartDesign rdf:type owl:Class; 
+                                                              rdfs:subClassOf :Physical_Design ;
+                                                              rdfs:label "Rel: specifies Install Of"@en . 
+#  --------------------------- Class  105------------------------- 
+:MBOMInstallation rdf:type owl:Class; 
+                  rdfs:subClassOf :ManufacturingPlan ;
+                  rdfs:label "MBOM Installation"@en . 
+#  --------------------------- Class  106------------------------- 
+:PlannedProductionAirplane rdf:type owl:Class; 
+                           rdfs:subClassOf :Airplane ;
+                           rdfs:label "Planned Production Airplane"@en . 
+#  --------------------------- Class  107------------------------- 
+:ProgramDirective rdf:type owl:Class; 
+                  rdfs:label "Program Directive"@en . 
+#  --------------------------- Class  108------------------------- 
+:AreaControlCode rdf:type owl:Class; 
+                 rdfs:label "Area Control Code"@en . 
+#  --------------------------- Class  109------------------------- 
+:Rel_MBOMInstallation_is_Allocated_To_ControlStation rdf:type owl:Class; 
+                                                     rdfs:label "Rel: is Allocated To"@en . 
+#  --------------------------- Class  110------------------------- 
+:Rel_MBOMInstallation_is_Allocated_To_ProductionLocation rdf:type owl:Class; 
+                                                         rdfs:label "Rel: Is Allocated To"@en . 
+#  --------------------------- Class  111------------------------- 
+:ManufacturingPlan rdf:type owl:Class; 
+                   rdfs:subClassOf :BuildPlan ;
+                   rdfs:label "Manufacturing Plan"@en . 
+#  --------------------------- Class  112------------------------- 
+:Regulation rdf:type owl:Class; 
+            rdfs:subClassOf :Requirement ;
+            rdfs:label "Regulation"@en . 
+#  --------------------------- Class  113------------------------- 
+:RegulationItem rdf:type owl:Class; 
+                rdfs:label "Regulation Item"@en . 
+#  --------------------------- Class  114------------------------- 
+:VVCase rdf:type owl:Class; 
+        rdfs:label "V&V Case"@en . 
+#  --------------------------- Class  115------------------------- 
+:VVActivity rdf:type owl:Class; 
+            rdfs:label "V&V Activity"@en . 
+#  --------------------------- Class  116------------------------- 
+:VVResource rdf:type owl:Class; 
+            rdfs:label "V&V Resource"@en . 
+#  --------------------------- Class  117------------------------- 
+:VVActivityExecution rdf:type owl:Class; 
+                     rdfs:label "V&V Activity Execution"@en . 
+#  --------------------------- Class  118------------------------- 
+:VVArtifact rdf:type owl:Class; 
+            rdfs:label "V&V Artifact"@en . 
+#  --------------------------- Class  119------------------------- 
+:ComplianceData rdf:type owl:Class; 
+                rdfs:label "Compliance Data"@en . 
+#  --------------------------- Class  120------------------------- 
+:Form8100_9 rdf:type owl:Class; 
+            rdfs:subClassOf :ComplianceData ;
+            rdfs:label "Form 8100-9"@en . 
+#  --------------------------- Class  121------------------------- 
+:MeansofCompliance rdf:type owl:Class; 
+                   rdfs:label "Means of Compliance"@en . 
+#  --------------------------- Class  122------------------------- 
+:CertificationBasis rdf:type owl:Class; 
+                    rdfs:label "Certification Basis"@en . 
+#  --------------------------- Class  123------------------------- 
+:CertificationPlan rdf:type owl:Class; 
+                   rdfs:label "Certification Plan"@en . 
+#  --------------------------- Class  124------------------------- 
+:AdvisoryCircular rdf:type owl:Class; 
+                  rdfs:label "Advisory Circular"@en . 
+#  --------------------------- Class  125------------------------- 
+:AdvisoryCircularGuidance rdf:type owl:Class; 
+                          rdfs:label "Advisory Circular Guidance"@en . 
+#  --------------------------- Class  126------------------------- 
+:AssemblyDesign rdf:type owl:Class; 
+                rdfs:subClassOf :PartDesign ;
+                rdfs:label "Assembly Design"@en . 
+#  --------------------------- Class  127------------------------- 
+:AssemblyDesign_Rel_specifiesAssemblyOf_PartDesign rdf:type owl:Class; 
+                                                   rdfs:label "Rel: specifies Assembly Of"@en . 
+#  --------------------------- Class  128------------------------- 
+:InstallationPlanGroup rdf:type owl:Class; 
+                       rdfs:label "Installation Plan Group"@en . 
+#  --------------------------- Class  129------------------------- 
+:InstallationPlan rdf:type owl:Class; 
+                  rdfs:subClassOf :ProcessPlan ;
+                  rdfs:label "Installation Plan"@en . 
+#  --------------------------- Class  130------------------------- 
+:ProcessPlan rdf:type owl:Class; 
+             rdfs:subClassOf :BuildPlan ;
+             rdfs:label "Process Plan"@en . 
+#  --------------------------- Class  131------------------------- 
+:BuildPlan rdf:type owl:Class; 
+           rdfs:subClassOf :ConfigurationInformation ;
+           rdfs:label "Build Plan"@en . 
+#  --------------------------- Class  132------------------------- 
+:ProcessPlanOperation rdf:type owl:Class; 
+                      rdfs:label "Process Plan Operation"@en . 
+#  --------------------------- Class  133------------------------- 
+:ProcessPlanOperationStep rdf:type owl:Class; 
+                          rdfs:label "Process Plan Operation Step"@en . 
+#  --------------------------- Class  134------------------------- 
+:InstallationPlanOperation rdf:type owl:Class; 
+                           rdfs:subClassOf :ProcessPlanOperation ;
+                           rdfs:label "Installation Plan Operation"@en . 
+#  --------------------------- Class  135------------------------- 
+:InstallationPlanOperationStep rdf:type owl:Class; 
+                               rdfs:subClassOf :ProcessPlanOperationStep ;
+                               rdfs:label "Installation Plan Operation Step"@en . 
+#  --------------------------- Class  136------------------------- 
+:WorkCenter rdf:type owl:Class; 
+            rdfs:label "Work Center"@en . 
+#  --------------------------- Class  137------------------------- 
+:Part rdf:type owl:Class; 
+      rdfs:subClassOf :Material ;
+      rdfs:label "Part"@en . 
+#  --------------------------- Class  138------------------------- 
+:MaterialMaster rdf:type owl:Class; 
+                rdfs:label "Material Master"@en . 
+#  --------------------------- Class  139------------------------- 
+:Material rdf:type owl:Class; 
+          rdfs:label "Material"@en . 
+#  --------------------------- Class  140------------------------- 
+:Production_Order rdf:type owl:Class; 
+                  rdfs:label "Production Order"@en . 
+#  --------------------------- Class  141------------------------- 
+:ShopOrder rdf:type owl:Class; 
+           rdfs:subClassOf :As_BuiltRecord ;
+           rdfs:label "Shop Order"@en . 
+#  --------------------------- Class  142------------------------- 
+:Supplier rdf:type owl:Class; 
+          rdfs:label "Supplier"@en . 
+#  --------------------------- Class  143------------------------- 
+:Re_MBOMInstallation_allocatedTo_Supplier rdf:type owl:Class; 
+                                          rdfs:label "allocated To"@en . 
+#  --------------------------- Class  144------------------------- 
+:DetailPart rdf:type owl:Class; 
+            rdfs:subClassOf :Part ;
+            rdfs:label "Detail Part"@en . 
+#  --------------------------- Class  145------------------------- 
+:Assembly rdf:type owl:Class; 
+          rdfs:subClassOf :Part ;
+          rdfs:label "Assembly"@en . 
+#  --------------------------- Class  146------------------------- 
+:Installation rdf:type owl:Class; 
+              rdfs:subClassOf :Part ;
+              rdfs:label "Installation"@en . 
+#  --------------------------- Class  147------------------------- 
+:Nonconformance rdf:type owl:Class; 
+                rdfs:label "Nonconformance"@en . 
+#  --------------------------- Class  148------------------------- 
+:NonconformanceRecord rdf:type owl:Class; 
+                      rdfs:subClassOf :As_BuiltRecord ;
+                      rdfs:subClassOf :Type_Design ;
+                      rdfs:label "Nonconformance Record"@en . 
+#  --------------------------- Class  149------------------------- 
+:As_BuiltRecord rdf:type owl:Class; 
+                rdfs:subClassOf :ConfigurationInformation ;
+                rdfs:label "As-Built Record"@en . 
+#  --------------------------- Class  150------------------------- 
+:NonconformanceRecord_Rel_NonconformanceDispositionFor_Part rdf:type owl:Class; 
+                                                            rdfs:label "Rel: Nonconformance Disposition For"@en . 
+#  --------------------------- Class  151------------------------- 
+:Containment_Analysis rdf:type owl:Class; 
+                      rdfs:label "Containment Analysis"@en . 
+#  --------------------------- Class  152------------------------- 
+:ContainmentPlan rdf:type owl:Class; 
+                 rdfs:label "Containment Plan"@en . 
+#  --------------------------- Class  153------------------------- 
+:ContainmentAction rdf:type owl:Class; 
+                   rdfs:label "Containment Action"@en . 
+#  --------------------------- Class  154------------------------- 
+:ContainmentVerification rdf:type owl:Class; 
+                         rdfs:label "Containment Verification"@en . 
+#  --------------------------- Class  155------------------------- 
+:Type_Design rdf:type owl:Class; 
+             rdfs:label "Type Design"@en . 
+#  --------------------------- Class  156------------------------- 
+:ProductStandard rdf:type owl:Class; 
+                 rdfs:subClassOf :Physical_Design ;
+                 rdfs:label "Product Standard"@en . 
+#  --------------------------- Class  157------------------------- 
+:ProductionIssue rdf:type owl:Class; 
+                 rdfs:label "Production Issue"@en . 
+#  --------------------------- Class  158------------------------- 
+:CorrectiveAction rdf:type owl:Class; 
+                  rdfs:label "Corrective Action"@en . 
+#  --------------------------- Class  159------------------------- 
+:ManufacturingCorrectiveAction rdf:type owl:Class; 
+                               rdfs:subClassOf :CorrectiveAction ;
+                               rdfs:label "Manufacturing Corrective Action"@en . 
+#  --------------------------- Class  160------------------------- 
+:EngineeringCorrectiveAction rdf:type owl:Class; 
+                             rdfs:subClassOf :CorrectiveAction ;
+                             rdfs:label "Engineering Corrective Action"@en . 
+#  --------------------------- Class  161------------------------- 
+:TypeDesignChange rdf:type owl:Class; 
+                  rdfs:label "Type Design Change"@en . 
+#  --------------------------- Class  162------------------------- 
+:TypeDesignDeviation rdf:type owl:Class; 
+                     rdfs:subClassOf :TypeDesignChange ;
+                     rdfs:label "Type Design Deviation"@en . 
+#  --------------------------- Class  163------------------------- 
+:NoticeofEscapement rdf:type owl:Class; 
+                    rdfs:subClassOf :Nonconformance ;
+                    rdfs:label "Notice of Escapement"@en . 
+#  --------------------------- Class  164------------------------- 
+:BuyerFurnishedEquipment rdf:type owl:Class; 
+                         rdfs:subClassOf :ContractualParts ;
+                         rdfs:label "Buyer Furnished Equipment"@en . 
+#  --------------------------- Class  165------------------------- 
+:SpecificationControlDrawingRequirementsPackage rdf:type owl:Class; 
+                                                rdfs:label "Specification Control Drawing Requirements Package"@en . 
+#  --------------------------- Class  166------------------------- 
+:SupplierDataRequirementsList rdf:type owl:Class; 
+                              rdfs:label "Supplier Data Requirements List"@en . 
+#  --------------------------- Class  167------------------------- 
+:EngineeringAdministrativeAgreement rdf:type owl:Class; 
+                                    rdfs:label "Engineering Administrative Agreement"@en . 
+#  --------------------------- Class  168------------------------- 
+:SupportConfigurationInformatinon rdf:type owl:Class; 
+                                  rdfs:subClassOf :ConfigurationInformation ;
+                                  rdfs:label "Support Configuration Informatinon"@en . 
+#  --------------------------- Class  169------------------------- 
+:AircraftMaintananceManual rdf:type owl:Class; 
+                           rdfs:subClassOf :SupportConfigurationInformatinon ;
+                           rdfs:label "Aircraft Maintanance Manual"@en . 
+#  --------------------------- Class  170------------------------- 
+:FaultIsolationManual rdf:type owl:Class; 
+                      rdfs:subClassOf :SupportConfigurationInformatinon ;
+                      rdfs:label "Fault Isolation Manual"@en . 
+#  --------------------------- Class  171------------------------- 
+:MaintenancePlanningData rdf:type owl:Class; 
+                         rdfs:subClassOf :SupportConfigurationInformatinon ;
+                         rdfs:label "Maintenance Planning Data"@en . 
+#  --------------------------- Class  172------------------------- 
+:StructuralRepairManual rdf:type owl:Class; 
+                        rdfs:subClassOf :SupportConfigurationInformatinon ;
+                        rdfs:label "Structural Repair Manual"@en . 
+#  --------------------------- Class  173------------------------- 
+:IllustratedPartsData rdf:type owl:Class; 
+                      rdfs:subClassOf :SupportConfigurationInformatinon ;
+                      rdfs:label "Illustrated Parts Data"@en . 
+#  --------------------------- Class  174------------------------- 
+:ServiceBulletin rdf:type owl:Class; 
+                 rdfs:subClassOf :SupportConfigurationInformatinon ;
+                 rdfs:label "Service Bulletin"@en . 
+#  --------------------------- Class  175------------------------- 
+:Support_Equipment_Tooling_Design rdf:type owl:Class; 
+                                  rdfs:subClassOf :SupportConfigurationInformatinon ;
+                                  rdfs:label "Support Equipment Tooling Design"@en . 
+#  --------------------------- Class  176------------------------- 
+:AirplaneFLightManual rdf:type owl:Class; 
+                      rdfs:subClassOf :SupportConfigurationInformatinon ;
+                      rdfs:label "Airplane FLight Manual"@en . 
+#  --------------------------- Class  177------------------------- 
+:FlightCrewOperationsManual rdf:type owl:Class; 
+                            rdfs:subClassOf :SupportConfigurationInformatinon ;
+                            rdfs:label "Flight Crew Operations Manual"@en . 
+#  --------------------------- Class  178------------------------- 
+:DispatchDeviationGuide rdf:type owl:Class; 
+                        rdfs:subClassOf :SupportConfigurationInformatinon ;
+                        rdfs:label "Dispatch Deviatoin Guide"@en . 
+#  --------------------------- Class  179------------------------- 
+:SparesCatalog rdf:type owl:Class; 
+               rdfs:subClassOf :SupportConfigurationInformatinon ;
+               rdfs:label "Spares Catalog"@en . 
+#  --------------------------- Class  180------------------------- 
+:ServiceRepairDesign rdf:type owl:Class; 
+                     rdfs:subClassOf :SupportConfigurationInformatinon ;
+                     rdfs:label "Service Repair Design"@en . 
+#  --------------------------- Class  181------------------------- 
+:AirplaneNormalChecklist rdf:type owl:Class; 
+                         rdfs:subClassOf :FlightCrewOperationsManual ;
+                         rdfs:label "Airplane Normal Checklist"@en . 
+#  --------------------------- Class  182------------------------- 
+:AirplaneNormalProcedure rdf:type owl:Class; 
+                         rdfs:subClassOf :FlightCrewOperationsManual ;
+                         rdfs:label "Airplane Normal Procedure"@en . 
+#  --------------------------- Class  183------------------------- 
+:AirplaneNonNormalChecklist rdf:type owl:Class; 
+                            rdfs:subClassOf :FlightCrewOperationsManual ;
+                            rdfs:label "Airplane Non Normal Checklist"@en . 
+#  --------------------------- Class  184------------------------- 
+:AirplaneSupplementaryProcedure rdf:type owl:Class; 
+                                rdfs:subClassOf :FlightCrewOperationsManual ;
+                                rdfs:label "AirplaneSupplementary Procedure"@en . 
+#  --------------------------- Class  185------------------------- 
+:AirplanePerformanceTables rdf:type owl:Class; 
+                           rdfs:subClassOf :FlightCrewOperationsManual ;
+                           rdfs:label "Airplane Performance Tables"@en . 
+#  --------------------------- Class  186------------------------- 
+:AirplaneLimitations rdf:type owl:Class; 
+                     rdfs:subClassOf :FlightCrewOperationsManual ;
+                     rdfs:label "Airplane Limitations"@en . 
+#  --------------------------- Class  187------------------------- 
+:AirplaneSystemDescription rdf:type owl:Class; 
+                           rdfs:subClassOf :FlightCrewOperationsManual ;
+                           rdfs:label "Airplane System Description"@en . 
+#  --------------------------- Class  188------------------------- 
+:AirplaneManeuvers rdf:type owl:Class; 
+                   rdfs:subClassOf :FlightCrewOperationsManual ;
+                   rdfs:label "Airplane Maneuvers"@en . 
+#  --------------------------- Class  189------------------------- 
+:2DPictureSheet rdf:type owl:Class; 
+                rdfs:subClassOf :EngineeringInstallation ;
+                rdfs:label "2D Picture Sheet"@en . 
+#  --------------------------- Class  190------------------------- 
+:PrepareTaskAircraftMaintenance rdf:type owl:Class; 
+                                rdfs:subClassOf :AircraftMaintananceManual ;
+                                rdfs:label "Prepare Task Aircraft Maintenance"@en . 
+#  --------------------------- Class  191------------------------- 
+:RemovalTaskAircraftMaintenance rdf:type owl:Class; 
+                                rdfs:subClassOf :AircraftMaintananceManual ;
+                                rdfs:label "Removal Task Aircraft Maintenance"@en . 
+#  --------------------------- Class  192------------------------- 
+:InstallationTaskAircraftMaintenance rdf:type owl:Class; 
+                                     rdfs:subClassOf :AircraftMaintananceManual ;
+                                     rdfs:label "Installation Task Aircraft Maintenance"@en . 
+#  --------------------------- Class  193------------------------- 
+:SafetyAssessmentAircraftMaintenance rdf:type owl:Class; 
+                                     rdfs:subClassOf :AircraftMaintananceManual ;
+                                     rdfs:label "Safety Assessment Aircraft Maintenance"@en . 
+#  --------------------------- Class  194------------------------- 
+:RestoreTaskAircraftMaintenance rdf:type owl:Class; 
+                                rdfs:subClassOf :AircraftMaintananceManual ;
+                                rdfs:label "Restore Task Aircraft Maintenance"@en . 
+#  --------------------------- Class  195------------------------- 
+:Airplane_Operating_Condition rdf:type owl:Class; 
+                              rdfs:subClassOf :OperatingConditions ;
+                              rdfs:label "Airplane Operating Condition"@en . 
+#  --------------------------- Class  196------------------------- 
+:FunctionalTest rdf:type owl:Class; 
+                rdfs:subClassOf :InstallationPlan ;
+                rdfs:label "Functional Test"@en . 
+#  --------------------------- Class  197------------------------- 
+:MaintenanceMessage rdf:type owl:Class; 
+                    rdfs:subClassOf :FaultIsolationManual ;
+                    rdfs:label "Maintenance Message"@en . 
+#  --------------------------- Class  198------------------------- 
+:AirplaneFault rdf:type owl:Class; 
+               rdfs:label "Airplane Fault"@en . 
+#  --------------------------- Class  199------------------------- 
+:FlightDeckFaults rdf:type owl:Class; 
+                  rdfs:subClassOf :AirplaneFault ;
+                  rdfs:label "Flight Deck Faults"@en . 
+#  --------------------------- Class  200------------------------- 
+:CabinFault rdf:type owl:Class; 
+            rdfs:subClassOf :AirplaneFault ;
+            rdfs:label "Cabin Fault"@en . 
+#  --------------------------- Class  201------------------------- 
+:IFEFault rdf:type owl:Class; 
+          rdfs:subClassOf :AirplaneFault ;
+          rdfs:label "IFE_Fault"@en . 
+#  --------------------------- Class  202------------------------- 
+:ObservedFault rdf:type owl:Class; 
+               rdfs:subClassOf :AirplaneFault ;
+               rdfs:label "Observed Fault"@en . 
+#  --------------------------- Class  203------------------------- 
+:FaultIsolationProcedure rdf:type owl:Class; 
+                         rdfs:subClassOf :FaultIsolationManual ;
+                         rdfs:label "Fault Isolation Procedure"@en . 
+#  --------------------------- Class  204------------------------- 
+:FaultCorrectiveAction rdf:type owl:Class; 
+                       rdfs:subClassOf :FaultIsolationManual ;
+                       rdfs:label "Fault Corrective Action"@en . 
+#  --------------------------- Class  205------------------------- 
+:FaultIsolationInitialEvaluation rdf:type owl:Class; 
+                                 rdfs:label "Fault Isolation Initial Evaluation"@en . 
+#  --------------------------- Class  206------------------------- 
+:LogicalInformation rdf:type owl:Class; 
+                    rdfs:subClassOf :LogicalSystemArchitecture ;
+                    rdfs:label "Logical Information"@en . 
+#  --------------------------- Class  207------------------------- 
+:LogicalSignal rdf:type owl:Class; 
+               rdfs:subClassOf :LogicalInformation ;
+               rdfs:label "Logical Signal"@en . 
+#  --------------------------- Class  208------------------------- 
+:AllowableDamageLimits rdf:type owl:Class; 
+                       rdfs:label "Allowable Damage Limits"@en . 
+#  --------------------------- Class  209------------------------- 
+:RepairableDamageLimits rdf:type owl:Class; 
+                        rdfs:label "Repairable Damage Limits"@en . 
+#  --------------------------- Class  210------------------------- 
+:StructuralRepairProcedures rdf:type owl:Class; 
+                            rdfs:subClassOf :StructuralRepairManual ;
+                            rdfs:label "Structural Repair Procedures"@en . 
+#  --------------------------- Class  211------------------------- 
+:StructuralDamage rdf:type owl:Class; 
+                  rdfs:label "Structural Damage"@en . 
+#  --------------------------- Class  212------------------------- 
+:Material_Master rdf:type owl:Class; 
+                 rdfs:label "Material Master"@en . 
+#  --------------------------- Class  213------------------------- 
+:VendorMaster rdf:type owl:Class; 
+              rdfs:label "Vendor Master"@en . 
+#  --------------------------- Class  214------------------------- 
+:StandardPartDesign rdf:type owl:Class; 
+                    rdfs:subClassOf :PartDesign ;
+                    rdfs:label "Standard Part Design"@en . 
+#  --------------------------- Class  215------------------------- 
+:AirworthinessDirective rdf:type owl:Class; 
+                        rdfs:subClassOf :Regulation ;
+                        rdfs:label "Airworthiness_Directive"@en . 
+#  --------------------------- Class  216------------------------- 
+:ComponentsMaintenanceManual rdf:type owl:Class; 
+                             rdfs:subClassOf :IllustratedPartsData ;
+                             rdfs:label "Components Maintenance Manual"@en . 
+#  --------------------------- Class  217------------------------- 
+:MaintenanceIllustrations rdf:type owl:Class; 
+                          rdfs:subClassOf :IllustratedPartsData ;
+                          rdfs:label "Maintenance Illustrations"@en . 
+#  --------------------------- Class  218------------------------- 
+:PartDesignCAD rdf:type owl:Class; 
+               rdfs:subClassOf :PartDesign ;
+               rdfs:label "Part Design CAD"@en . 
+#  --------------------------- Class  219------------------------- 
+:PartDesignBOM rdf:type owl:Class; 
+               rdfs:subClassOf :PartDesign ;
+               rdfs:label "Part Design BOM"@en . 
+#  --------------------------- Class  220------------------------- 
+:ProcessSpecification rdf:type owl:Class; 
+                      rdfs:subClassOf :ProductStandard ;
+                      rdfs:label "Process Specification"@en . 
+#  --------------------------- Class  221------------------------- 
+:MaterialSpecification rdf:type owl:Class; 
+                       rdfs:subClassOf :ProductStandard ;
+                       rdfs:label "Material Specification"@en . 
+#  --------------------------- Class  222------------------------- 
+:PartStandard rdf:type owl:Class; 
+              rdfs:subClassOf :ProductStandard ;
+              rdfs:subClassOf :PartDesign ;
+              rdfs:label "Part Standard"@en . 
+#  --------------------------- Class  223------------------------- 
+:ProductStandardItem rdf:type owl:Class; 
+                     rdfs:subClassOf :Physical_Design ;
+                     rdfs:label "Product Standard Item"@en . 
+#  --------------------------- Class  224------------------------- 
+:RawMaterialDefinition rdf:type owl:Class; 
+                       rdfs:subClassOf :ProductStandardItem ;
+                       rdfs:label "Raw Material Definition"@en . 
+#  --------------------------- Class  225------------------------- 
+:ManufacturingProcessSpecification rdf:type owl:Class; 
+                                   rdfs:subClassOf :ProductStandardItem ;
+                                   rdfs:label "Manufacturing Process Specification"@en . 
+#  --------------------------- Class  226------------------------- 
+:StandardPartDefinition rdf:type owl:Class; 
+                        rdfs:subClassOf :ProductStandardItem ;
+                        rdfs:label "Standard Part Definition"@en . 
+#  --------------------------- Class  227------------------------- 
+:DesignNote rdf:type owl:Class; 
+            rdfs:label "Design Note"@en . 
+#  --------------------------- Class  228------------------------- 
+:FlagNote rdf:type owl:Class; 
+          rdfs:label "Flag Note"@en . 
+#  --------------------------- Class  229------------------------- 
+:LogicalSystemPortOccurrence rdf:type owl:Class; 
+                             rdfs:label "Logical System Port Occurrence"@en . 
+#  --------------------------- Class  230------------------------- 
+:GeneralNote rdf:type owl:Class; 
+             rdfs:label "General Note"@en . 
+#  --------------------------- Class  231------------------------- 
+:MasterProductionSchedule rdf:type owl:Class; 
+                          rdfs:label "Master Production Shedule"@en . 
+#  --------------------------- Class  232------------------------- 
+:HoldingFixture rdf:type owl:Class; 
+                rdfs:subClassOf :ProductionAsset ;
+                rdfs:label "Holding Fixture"@en . 
+#  --------------------------- Class  233------------------------- 
+:ProductionConsumables rdf:type owl:Class; 
+                       rdfs:label "Production Consumables"@en . 
+#  --------------------------- Class  234------------------------- 
+:DetailedProductionSchedule rdf:type owl:Class; 
+                            rdfs:label "Detailed Production Schedule"@en . 
+#  --------------------------- Class  235------------------------- 
+:ProductionAsset rdf:type owl:Class; 
+                 rdfs:label "Production Asset"@en . 
+#  --------------------------- Class  236------------------------- 
+:Robotics rdf:type owl:Class; 
+          rdfs:subClassOf :ProductionAsset ;
+          rdfs:label "Robotics"@en . 
+#  --------------------------- Class  237------------------------- 
+:Automated_Drillers rdf:type owl:Class; 
+                    rdfs:subClassOf :ProductionAsset ;
+                    rdfs:label "AutomatedDrillers"@en . 
+#  --------------------------- Class  238------------------------- 
+:TransportationTools rdf:type owl:Class; 
+                     rdfs:subClassOf :ProductionAsset ;
+                     rdfs:label "Transportation Tools"@en . 
+#  --------------------------- Class  239------------------------- 
+:LayupMandrel rdf:type owl:Class; 
+              rdfs:subClassOf :ProductionAsset ;
+              rdfs:label "Layup Mandrel"@en . 
+#  --------------------------- Class  240------------------------- 
+:TestEquipment rdf:type owl:Class; 
+               rdfs:subClassOf :ProductionAsset ;
+               rdfs:label "Test Equipment"@en . 
+#  --------------------------- Class  241------------------------- 
+:EmployeeCertification rdf:type owl:Class; 
+                       rdfs:label "Employee Certification"@en . 
+#  --------------------------- Class  242------------------------- 
+:ProductionAssetInstance rdf:type owl:Class; 
+                         rdfs:label "Production Asset Instance"@en . 
+#  --------------------------- Class  243------------------------- 
+:EquipmentMaster rdf:type owl:Class; 
+                 rdfs:label "Equipment Master"@en . 
+#  --------------------------- Class  244------------------------- 
+:ShopOrderOperation rdf:type owl:Class; 
+                    rdfs:label "Shop Order Operation"@en . 
+#  --------------------------- Class  245------------------------- 
+:ShopOrderOperationStep rdf:type owl:Class; 
+                        rdfs:label "Shop Order Operation Step"@en . 
+#  --------------------------- Class  246------------------------- 
+:Employee rdf:type owl:Class; 
+          rdfs:label "Employee"@en . 
+#  --------------------------- Class  247------------------------- 
+:MachineControlData rdf:type owl:Class; 
+                    rdfs:subClassOf :As_BuiltRecord ;
+                    rdfs:label "Machine Control Data"@en . 
+#  --------------------------- Class  248------------------------- 
+:Software rdf:type owl:Class; 
+          rdfs:subClassOf :Part ;
+          rdfs:label "Software"@en . 
+#  --------------------------- Class  249------------------------- 
+:MechanicalTransportElementDesign rdf:type owl:Class; 
+                                  rdfs:subClassOf :TransportElementDesign ;
+                                  rdfs:label "Mechanical Transport Element Design"@en . 
+#  --------------------------- Class  250------------------------- 
+:Change rdf:type owl:Class; 
+        rdfs:label "Change"@en . 
+#  --------------------------- Class  251------------------------- 
+:PhysicalLayoutDesign rdf:type owl:Class; 
+                      rdfs:subClassOf :Physical_Design ;
+                      rdfs:label "Physical Layout Design"@en . 
+#  --------------------------- Class  252------------------------- 
+:MasterGeometry rdf:type owl:Class; 
+                rdfs:subClassOf :PhysicalLayoutDesign ;
+                rdfs:label "Master Geometry"@en . 
+#  --------------------------- Class  253------------------------- 
+:MasterDimensionsSurface rdf:type owl:Class; 
+                         rdfs:subClassOf :MasterGeometry ;
+                         rdfs:label "Master Dimensions Surface"@en . 
+#  --------------------------- Class  254------------------------- 
+:MasterDatumFile rdf:type owl:Class; 
+                 rdfs:subClassOf :MasterGeometry ;
+                 rdfs:label "Master Datum File"@en . 
+#  --------------------------- Class  255------------------------- 
+:RelationalLayoutModel rdf:type owl:Class; 
+                       rdfs:subClassOf :MasterGeometry ;
+                       rdfs:label "Relational Layout Model"@en . 
+#  --------------------------- Class  256------------------------- 
+:LayoutOfPassengerAccommodation rdf:type owl:Class; 
+                                rdfs:label "Layout Of Passenger Accommodation"@en . 
+#  --------------------------- Class  257------------------------- 
+:MasterBundleNetwork rdf:type owl:Class; 
+                     rdfs:label "Master Bundle Network"@en . 
+#  --------------------------- Class  258------------------------- 
+:Rel_SystemPinToPinDesign_drives_SystemWiringDesign rdf:type owl:Class; 
+                                                    rdfs:label "Rel_drives"@en . 
