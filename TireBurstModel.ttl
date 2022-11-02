@@ -1,0 +1,1195 @@
+@prefix semspinadapter: <http://www.smartlogic.com/2019/08/semaphore-spin-adapter#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix semcommands: <http://www.smartlogic.com/2019/04/semaphore-commands#> .
+@prefix semshreports: <http://www.smartlogic.com/2018/10/semaphore-shacl-reports#> .
+@prefix semshfun: <http://www.smartlogic.com/2018/03/semaphore-shacl-functions#> .
+@prefix spif:  <http://spinrdf.org/spif#> .
+@prefix tables: <http://topbraid.org/tables#> .
+@prefix teamworkrulesx: <http://www.smartlogic.com/2016/05/semaphore-teamworkrulesx#> .
+@prefix semvar: <http://www.smartlogic.com/2015/10/semaphore-var#> .
+@prefix ui:    <http://uispin.org/ui#> .
+@prefix semutils: <http://www.smartlogic.com/2015/09/semaphore-utils#> .
+@prefix sysmodel: <urn:x-sys-model:> .
+@prefix evntask: <urn:x-evn-tag:> .
+@prefix semreports: <http://www.smartlogic.com/2017/06/semaphore-reports#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix model: <urn:x-evn-master:> .
+@prefix tag:   <urn:x-tags:> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix sioc:  <http://rdfs.org/sioc/ns#> .
+@prefix systask: <urn:x-sys-task:> .
+@prefix sempubfun: <http://www.smartlogic.com/2019/08/semaphore-publisher-functions#> .
+@prefix tempgraph: <urn:x-temp-graph:> .
+@prefix specialgraph: <urn:x-special-graph:> .
+@prefix semui: <http://www.smartlogic.com/2017/12/semaphore-ui#> .
+@prefix list:  <http://jena.hpl.hp.com/ARQ/list#> .
+@prefix semplugin: <http://www.smartlogic.com/2018/06/semaphore-plugins#> .
+@prefix spl:   <http://spinrdf.org/spl#> .
+@prefix semlang: <http://www.smartlogic.com/2015/03/semaphore-languages#> .
+@prefix semordrules: <http://www.smartlogic.com/2018/03/semaphore-ordering-rules#> .
+@prefix task:  <urn:x-ort-tag:> .
+@prefix sempubconf: <http://www.smartlogic.com/2019/04/semaphore-publisher-configuration#> .
+@prefix semwidgets: <http://www.smartlogic.com/2016/02/semaphore-widgets#> .
+@prefix taxonomies: <http://evn.topbraidlive.org/evnprojects#> .
+@prefix meta:  <http://www.smartlogic.com/2014/10/semaphore-meta#> .
+@prefix semgroups: <http://www.smartlogic.com/2018/04/semaphore-groups#> .
+@prefix semfun: <http://www.smartlogic.com/2015/02/semaphore-functions#> .
+@prefix sempub: <http://www.smartlogic.com/2017/06/semaphore-publisher#> .
+@prefix factsExample: <http://www.smartlogic.com/2018/01/semaphore-fact-extraction-example-model#> .
+@prefix sempermissions: <http://www.smartlogic.com/2015/11/semaphore-permissions#> .
+@prefix role:  <urn:x-tb-role:> .
+@prefix semgroupsfun: <http://www.smartlogic.com/2018/04/semaphore-groups-functions#> .
+@prefix sempubpermissions: <http://www.smartlogic.com/2019/03/semaphore-publisher-permissions#> .
+@prefix fn:    <http://www.w3.org/2005/xpath-functions#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix semvirtfun: <http://www.smartlogic.com/2019/01/semaphore-virtualgraph-functions#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sys:   <http://www.smartlogic.com/2014/10/semaphore-sys#> .
+@prefix tchmodel: <urn:x-evn-tch-union:> .
+@prefix smf:   <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix facts: <http://www.smartlogic.com/2018/01/semaphore-fact-extraction#> .
+@prefix example: <http://proto.smartlogic.com/example#> .
+@prefix systaskext: <urn:x-sys-task-with-master:> .
+@prefix semtemplates: <http://www.smartlogic.com/2016/04/semaphore-templates#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix semmonitoring: <http://www.smartlogic.com/2019/02/semaphore-monitoring#> .
+@prefix semspincache: <http://www.smartlogic.com/2018/06/semaphore-spin-cache#> .
+@prefix arg:   <http://spinrdf.org/arg#> .
+@prefix semord: <http://www.smartlogic.com/2018/03/semaphore-ordering#> .
+@prefix sem:   <http://www.smartlogic.com/2014/08/semaphore-core#> .
+@prefix evnimport: <urn:x-tb:evnimport#> .
+@prefix spinmap: <http://spinrdf.org/spinmap#> .
+@prefix lang:  <http://id.loc.gov/vocabulary/iso639-1/> .
+@prefix sp:    <http://spinrdf.org/sp#> .
+@prefix semspin: <http://www.smartlogic.com/2015/02/semaphore-spin-functions#> .
+@prefix factsEntities: <http://www.smartlogic.com/2018/01/semaphore-fact-extraction-entities#> .
+@prefix temp:  <urn:x-temp:> .
+@prefix semordfun: <http://www.smartlogic.com/2018/03/semaphore-ordering-functions#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix semupdates: <http://www.smartlogic.com/2019/04/semaphore-updates#> .
+@prefix semlisteners: <http://www.smartlogic.com/2016/10/semaphore-listeners#> .
+@prefix semvirt: <http://www.smartlogic.com/2019/01/semaphore-virtualgraph#> .
+@prefix semsys: <http://www.smartlogic.com/2019/09/semaphore-system#> .
+@prefix semsh: <http://www.smartlogic.com/2019/06/semaphore-shacl#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix spin:  <http://spinrdf.org/spin#> .
+@prefix semupgrade: <http://www.smartlogic.com/2019/03/semaphore-upgrade#> .
+@prefix sempath: <http://www.smartlogic.com/2016/01/semaphore-path#> .
+@prefix semspinmap: <http://www.smartlogic.com/2016/04/semaphore-spinMap#> .
+@prefix swa:   <http://topbraid.org/swa#> .
+@prefix user:  <urn:x-tb-users:> .
+@prefix semspinx: <http://www.smartlogic.com/2015/11/semaphore-spin#> .
+@prefix semworkspace: <http://www.smartlogic.com/2019/01/semaphore-workspace#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0052425c-d20a-498a-ab20-4995a3a777d5>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        sem:guid          "0052425c-d20a-498a-ab20-4995a3a777d5" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/0052425c-d20a-498a-ab20-4995a3a777d5/PassengerAndCrewEgress_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0052425c-d20a-498a-ab20-4995a3a777d5/PassengerAndCrewEgress_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Passenger and Crew Egress"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/011fcaf8-39b8-4499-a46f-121e6407b346>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "011fcaf8-39b8-4499-a46f-121e6407b346" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/011fcaf8-39b8-4499-a46f-121e6407b346/AftSection_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/011fcaf8-39b8-4499-a46f-121e6407b346/AftSection_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Aft Section"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/047dfa47-0b60-4b64-9cb1-f81f824e1e65>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedSystemElement> ;
+        sem:guid          "047dfa47-0b60-4b64-9cb1-f81f824e1e65" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/e65c9ed5-0044-440d-ae33-fe1464269a44> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/047dfa47-0b60-4b64-9cb1-f81f824e1e65/MainGearRetractActuator_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/047dfa47-0b60-4b64-9cb1-f81f824e1e65/MainGearRetractActuator_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Main Gear Retract Actuator"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/06c3084e-4fd1-4e8d-a831-fc8fd87fcca9>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedSystemElement> ;
+        sem:guid          "06c3084e-4fd1-4e8d-a831-fc8fd87fcca9" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/e65c9ed5-0044-440d-ae33-fe1464269a44> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/06c3084e-4fd1-4e8d-a831-fc8fd87fcca9/BrakingCabinAirCompressor-RamFans_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/06c3084e-4fd1-4e8d-a831-fc8fd87fcca9/BrakingCabinAirCompressor-RamFans_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Braking Cabin Air Compressor, Ram Fans"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0a17e8fc-9f94-4804-8bfe-61b7453416a2>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        sem:guid          "0a17e8fc-9f94-4804-8bfe-61b7453416a2" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/0a17e8fc-9f94-4804-8bfe-61b7453416a2/Corrosion_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0a17e8fc-9f94-4804-8bfe-61b7453416a2/Corrosion_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Corrosion"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0d459151-1781-4afe-a24f-5ac2220f0da0>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Models> ;
+        sem:guid          "0d459151-1781-4afe-a24f-5ac2220f0da0" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/c7a6f17e-5afe-4b7c-a8f3-d55a203be0fb> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/0d459151-1781-4afe-a24f-5ac2220f0da0/IGW_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0d459151-1781-4afe-a24f-5ac2220f0da0/IGW_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "IGW"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0ef8fc6c-c740-4c43-a39c-23280cb89b10>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "0ef8fc6c-c740-4c43-a39c-23280cb89b10" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/0ef8fc6c-c740-4c43-a39c-23280cb89b10/NoseWheelSensors_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0ef8fc6c-c740-4c43-a39c-23280cb89b10/NoseWheelSensors_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Nose Wheel Steering"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0fa33ac0-1089-49a8-9ec9-05a1b787c686>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "0fa33ac0-1089-49a8-9ec9-05a1b787c686" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/0fa33ac0-1089-49a8-9ec9-05a1b787c686/RollingStock_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/0fa33ac0-1089-49a8-9ec9-05a1b787c686/RollingStock_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Rolling Stock"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/118e9b0e-dbad-4dba-8d1a-0d44304f2e58>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        sem:guid          "118e9b0e-dbad-4dba-8d1a-0d44304f2e58" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/118e9b0e-dbad-4dba-8d1a-0d44304f2e58/FlightCrewSituationalAwareness_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/118e9b0e-dbad-4dba-8d1a-0d44304f2e58/FlightCrewSituationalAwareness_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Flight Crew Situational Awareness"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/147359de-f49a-4dfd-b236-ef9525f15bf1>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        sem:guid          "147359de-f49a-4dfd-b236-ef9525f15bf1" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/147359de-f49a-4dfd-b236-ef9525f15bf1/FlightDeckEnvironmentThatSupportsAFunction_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/147359de-f49a-4dfd-b236-ef9525f15bf1/FlightDeckEnvironmentThatSupportsAFunction_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Flight Deck Environment that supports a Functional Flight Crew"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/15e5d4f9-bb25-4d20-be89-078d82065f8e>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "15e5d4f9-bb25-4d20-be89-078d82065f8e" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/15e5d4f9-bb25-4d20-be89-078d82065f8e/SystemsMountedOnTheMainLandingGearTruck_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/15e5d4f9-bb25-4d20-be89-078d82065f8e/SystemsMountedOnTheMainLandingGearTruck_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Systems Mounted on the Main Landing Gear Truck"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        sem:guid          "18938d54-ffb1-4bf6-8a36-6b5c54015fec" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec/ThreatCause_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec/ThreatCause_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Threat Cause"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/1d3a6670-922e-4eeb-bcc5-7206641d0f01>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/GearMode> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/HasFailure>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/7d9b6640-a5e9-43f6-bfc7-7a341621f50c> , <http://termbank.web.boeing.com/uim/TireBurstModel/829b9f16-4d80-4ad5-9c66-0a4bb48a5c54> , <http://termbank.web.boeing.com/uim/TireBurstModel/b1251a9b-bf96-4844-8849-3c9929659f8a> , <http://termbank.web.boeing.com/uim/TireBurstModel/fd7aca26-4c33-41aa-887c-2f5f9afbd753> ;
+        sem:guid          "1d3a6670-922e-4eeb-bcc5-7206641d0f01" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/594d5fa9-47a5-4fa0-a572-3ced26ee8d69> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/1d3a6670-922e-4eeb-bcc5-7206641d0f01/GearDown_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/1d3a6670-922e-4eeb-bcc5-7206641d0f01/GearDown_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Gear Down"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/1e4c09be-8f67-4d8d-9165-83ed645b6d2d>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        sem:guid          "1e4c09be-8f67-4d8d-9165-83ed645b6d2d" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/1e4c09be-8f67-4d8d-9165-83ed645b6d2d/SystemElement_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/1e4c09be-8f67-4d8d-9165-83ed645b6d2d/SystemElement_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "System Element"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/24d77aa3-5712-45fd-bc79-fe617588b8ee>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatZones> ;
+        sem:guid          "24d77aa3-5712-45fd-bc79-fe617588b8ee" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/e22c0c45-75fc-4316-befb-5fa1c625f79e> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/24d77aa3-5712-45fd-bc79-fe617588b8ee/NoseLandingGearWheelWell_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/24d77aa3-5712-45fd-bc79-fe617588b8ee/NoseLandingGearWheelWell_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Nose Landing Gear Wheel Well"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/286bf2a5-b047-43fb-b48b-81ce49c2fb9e>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/Causes>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/fd7aca26-4c33-41aa-887c-2f5f9afbd753> ;
+        sem:guid          "286bf2a5-b047-43fb-b48b-81ce49c2fb9e" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/286bf2a5-b047-43fb-b48b-81ce49c2fb9e/UnderInflation_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/286bf2a5-b047-43fb-b48b-81ce49c2fb9e/UnderInflation_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Under Inflation"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/2b7bca60-2850-49dc-9bd2-034ac24dd15a>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/AppliesTo>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/570c3129-65ed-43bb-85d9-2b1f5e291814> , <http://termbank.web.boeing.com/uim/TireBurstModel/82e807a6-458e-43bc-86ed-7a415adb9e07> , <http://termbank.web.boeing.com/uim/TireBurstModel/a11cc329-2c67-4214-86d2-b4980192bd4e> ;
+        sem:guid          "2b7bca60-2850-49dc-9bd2-034ac24dd15a" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/eac1e5cf-595f-40f8-8952-43865ae6b082> ;
+        skos:definition   "<p><!--StartFragment-->Alternate extend isolation valve (AEIV) plumbing revisions that move the AEIV <br/>connection to the center system reservoir from the bottom of the reservoir to the <br/>reservoir standpipe outlet.<!--EndFragment--><br/></p>"@en ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/2b7bca60-2850-49dc-9bd2-034ac24dd15a/MoveTheAlternativeExtendIsolationValve_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/2b7bca60-2850-49dc-9bd2-034ac24dd15a/MoveTheAlternativeExtendIsolationValve_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Move the Alternative Extend isolation valve"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/2ea27e9f-532e-4fce-ae85-22bd4d552694>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "2ea27e9f-532e-4fce-ae85-22bd4d552694" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/2ea27e9f-532e-4fce-ae85-22bd4d552694/ForwardSection_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/2ea27e9f-532e-4fce-ae85-22bd4d552694/ForwardSection_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Forward Section"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/33505363-2a2d-4524-9082-76d2a004e375>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "33505363-2a2d-4524-9082-76d2a004e375" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/33505363-2a2d-4524-9082-76d2a004e375/MainLandingGearTruck_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/33505363-2a2d-4524-9082-76d2a004e375/MainLandingGearTruck_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Main Landing Gear Truck"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/34516d38-be22-4700-a45e-2215a79c4635>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/GearMode> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/HasFailure>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/3f50ef4c-5c80-4cd9-a7dd-001bae2ed787> , <http://termbank.web.boeing.com/uim/TireBurstModel/b1251a9b-bf96-4844-8849-3c9929659f8a> , <http://termbank.web.boeing.com/uim/TireBurstModel/fd7aca26-4c33-41aa-887c-2f5f9afbd753> ;
+        sem:guid          "34516d38-be22-4700-a45e-2215a79c4635" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/594d5fa9-47a5-4fa0-a572-3ced26ee8d69> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/34516d38-be22-4700-a45e-2215a79c4635/GearUp_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/34516d38-be22-4700-a45e-2215a79c4635/GearUp_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Gear Up"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/3cf52612-8662-4af4-9b38-95dcfa1c0fd2>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        sem:guid          "3cf52612-8662-4af4-9b38-95dcfa1c0fd2" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/3cf52612-8662-4af4-9b38-95dcfa1c0fd2/NoseLandingGearStructAndWheelWell_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/3cf52612-8662-4af4-9b38-95dcfa1c0fd2/NoseLandingGearStructAndWheelWell_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Nose Landing Gear Strut and Wheel Well"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/3f129ccd-360a-4a8f-bbf0-8bb2e85feaf9>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "3f129ccd-360a-4a8f-bbf0-8bb2e85feaf9" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/3f129ccd-360a-4a8f-bbf0-8bb2e85feaf9/VFSGPowerFeeders_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/3f129ccd-360a-4a8f-bbf0-8bb2e85feaf9/VFSGPowerFeeders_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "VFSG Power Feeders"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/3f50ef4c-5c80-4cd9-a7dd-001bae2ed787>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/CausedBy>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/c7938445-d16b-4d8a-b6e7-e4974bf88c27> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/Mechanism>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/e3fbcd39-cd22-44f4-b0e2-c4f9d40552d6> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/OccursDuring>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/34516d38-be22-4700-a45e-2215a79c4635> ;
+        sem:guid          "3f50ef4c-5c80-4cd9-a7dd-001bae2ed787" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/eeca68e4-3463-418c-97c8-73ed63f61f48> ;
+        skos:definition   "<p><!--StartFragment-->This is when the wheel rim fails structurally and a segment of the rim detaches and is propelled away while the wheel is rotating.<!--EndFragment--><br/></p>"@en ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/3f50ef4c-5c80-4cd9-a7dd-001bae2ed787/RimRelease_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/3f50ef4c-5c80-4cd9-a7dd-001bae2ed787/RimRelease_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Rim Release"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/420edfa8-7a72-4d55-91c6-065cc52e26f3>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedSystemElement> ;
+        sem:guid          "420edfa8-7a72-4d55-91c6-065cc52e26f3" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/e65c9ed5-0044-440d-ae33-fe1464269a44> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/420edfa8-7a72-4d55-91c6-065cc52e26f3/AlternativeExtendIsolationValve_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/420edfa8-7a72-4d55-91c6-065cc52e26f3/AlternativeExtendIsolationValve_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Alternative Extend Isolation Valve"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/49beb8a3-2d35-4eee-8dc3-ec7be067b217>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/AppliesTo>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/82e807a6-458e-43bc-86ed-7a415adb9e07> , <http://termbank.web.boeing.com/uim/TireBurstModel/a11cc329-2c67-4214-86d2-b4980192bd4e> ;
+        sem:guid          "49beb8a3-2d35-4eee-8dc3-ec7be067b217" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/eac1e5cf-595f-40f8-8952-43865ae6b082> ;
+        skos:definition   "<p><!--StartFragment-->Tubing revisions that reroute main gear actuator head end return lines to utilize an existing check valve in the system. <!--EndFragment--><br/></p>"@en ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/49beb8a3-2d35-4eee-8dc3-ec7be067b217/Rerouting_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/49beb8a3-2d35-4eee-8dc3-ec7be067b217/Rerouting_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Rerouting"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/4c1e3334-ab27-495b-bcb1-f3296a02ae4b>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        sem:guid          "4c1e3334-ab27-495b-bcb1-f3296a02ae4b" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/4c1e3334-ab27-495b-bcb1-f3296a02ae4b/TakeoffAndLandingOnRunwayAndStopping_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/4c1e3334-ab27-495b-bcb1-f3296a02ae4b/TakeoffAndLandingOnRunwayAndStopping_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Takeoff and Landing on Runway and Stopping"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/4d51202b-dcfc-4af8-b831-3c964dd5e55a>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        sem:guid          "4d51202b-dcfc-4af8-b831-3c964dd5e55a" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/4d51202b-dcfc-4af8-b831-3c964dd5e55a/GearPost_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/4d51202b-dcfc-4af8-b831-3c964dd5e55a/GearPost_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Gear Post"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/55395bd6-4d31-42bb-a01f-22f01b644932>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Effects> ;
+        sem:guid          "55395bd6-4d31-42bb-a01f-22f01b644932" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/55395bd6-4d31-42bb-a01f-22f01b644932/Effect_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/55395bd6-4d31-42bb-a01f-22f01b644932/Effect_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Effect"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/570c3129-65ed-43bb-85d9-2b1f5e291814>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Models> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedBy>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/2b7bca60-2850-49dc-9bd2-034ac24dd15a> , <http://termbank.web.boeing.com/uim/TireBurstModel/bc13161f-2ced-4d65-9dde-332f4f6ac0ec> , <http://termbank.web.boeing.com/uim/TireBurstModel/f5859b28-3c20-4b91-9e6b-b9008fbc71e0> ;
+        sem:guid          "570c3129-65ed-43bb-85d9-2b1f5e291814" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/c7a6f17e-5afe-4b7c-a8f3-d55a203be0fb> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/570c3129-65ed-43bb-85d9-2b1f5e291814/787-8_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/570c3129-65ed-43bb-85d9-2b1f5e291814/787-8_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "787-8"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/58d448b8-e41a-42b4-b9fc-a59cdfa847b9>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        sem:guid          "58d448b8-e41a-42b4-b9fc-a59cdfa847b9" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/58d448b8-e41a-42b4-b9fc-a59cdfa847b9/ManufacturingDefect_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/58d448b8-e41a-42b4-b9fc-a59cdfa847b9/ManufacturingDefect_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Manufacturing Defect"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/594d5fa9-47a5-4fa0-a572-3ced26ee8d69>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/GearMode> ;
+        sem:guid          "594d5fa9-47a5-4fa0-a572-3ced26ee8d69" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/594d5fa9-47a5-4fa0-a572-3ced26ee8d69/GearMode_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/594d5fa9-47a5-4fa0-a572-3ced26ee8d69/GearMode_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Gear Mode"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/6234be9b-75e9-4098-8d41-f6e2b85e5844>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        sem:guid          "6234be9b-75e9-4098-8d41-f6e2b85e5844" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/6a1312df-9f16-4436-80de-058c39b54a73> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/6234be9b-75e9-4098-8d41-f6e2b85e5844/WiringDesign_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/6234be9b-75e9-4098-8d41-f6e2b85e5844/WiringDesign_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Wiring Design"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/65bfbd32-2d5a-461d-9bdd-40950f9b8499>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Effects> ;
+        sem:guid          "65bfbd32-2d5a-461d-9bdd-40950f9b8499" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/55395bd6-4d31-42bb-a01f-22f01b644932> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/65bfbd32-2d5a-461d-9bdd-40950f9b8499/ReleaseOfASingleActuatorMechanism_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/65bfbd32-2d5a-461d-9bdd-40950f9b8499/ReleaseOfASingleActuatorMechanism_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Release of a Single Actuator Mechanism"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/6a1312df-9f16-4436-80de-058c39b54a73>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        sem:guid          "6a1312df-9f16-4436-80de-058c39b54a73" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/6a1312df-9f16-4436-80de-058c39b54a73/MitigationStrategy_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/6a1312df-9f16-4436-80de-058c39b54a73/MitigationStrategy_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Mitigation Strategy"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/6e7f4e84-4d98-4e5e-bc0e-d58ff7f37dde>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        sem:guid          "6e7f4e84-4d98-4e5e-bc0e-d58ff7f37dde" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/6e7f4e84-4d98-4e5e-bc0e-d58ff7f37dde/MainLandingGearStructureAndRollingStock_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/6e7f4e84-4d98-4e5e-bc0e-d58ff7f37dde/MainLandingGearStructureAndRollingStock_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Main landing Gear Strut and Rolling Stock"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/70e5bc84-652b-4520-a6ac-a32abf276c65>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        sem:guid          "70e5bc84-652b-4520-a6ac-a32abf276c65" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/70e5bc84-652b-4520-a6ac-a32abf276c65/FuselageAboveTheMainWheelWells_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/70e5bc84-652b-4520-a6ac-a32abf276c65/FuselageAboveTheMainWheelWells_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Fuselage Above the Main Wheel Wells"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/73e27f69-d711-499a-b07c-9b5b0a8dfd30>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "73e27f69-d711-499a-b07c-9b5b0a8dfd30" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/73e27f69-d711-499a-b07c-9b5b0a8dfd30/LandingGearAccuatingSystem_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/73e27f69-d711-499a-b07c-9b5b0a8dfd30/LandingGearAccuatingSystem_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Landing Gear Actuating System"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/741a84fb-0ebd-424a-a7ff-1f403981ca34>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        sem:guid          "741a84fb-0ebd-424a-a7ff-1f403981ca34" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/741a84fb-0ebd-424a-a7ff-1f403981ca34/WingInboardFixedTrailingEdge_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/741a84fb-0ebd-424a-a7ff-1f403981ca34/WingInboardFixedTrailingEdge_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Wing Inboard Fixed Trailing Edge"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/78e9dc28-876d-474f-9c8b-6925dae566df>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/Causes>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/fd7aca26-4c33-41aa-887c-2f5f9afbd753> ;
+        sem:guid          "78e9dc28-876d-474f-9c8b-6925dae566df" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/78e9dc28-876d-474f-9c8b-6925dae566df/BreakingSkids_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/78e9dc28-876d-474f-9c8b-6925dae566df/BreakingSkids_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Breaking Skids"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/7b80d830-cbfa-4363-b9a4-8758e9dea657>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "7b80d830-cbfa-4363-b9a4-8758e9dea657" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/7b80d830-cbfa-4363-b9a4-8758e9dea657/MainLandingGearWheelWells_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/7b80d830-cbfa-4363-b9a4-8758e9dea657/MainLandingGearWheelWells_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Main Landing Gear Wheel Wells"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/7d9b6640-a5e9-43f6-bfc7-7a341621f50c>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/Mechanism>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/e3fbcd39-cd22-44f4-b0e2-c4f9d40552d6> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/OccursDuring>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/1d3a6670-922e-4eeb-bcc5-7206641d0f01> ;
+        sem:guid          "7d9b6640-a5e9-43f6-bfc7-7a341621f50c" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/eeca68e4-3463-418c-97c8-73ed63f61f48> ;
+        skos:definition   "<p><!--StartFragment-->This is a loose tread that has become completely detached from the tire. </p><div><p>The thrown tread event can occur any time the tire is rolling on the ground up to the rated speed of the tire. </p></div><div><p>Two thrown treads are considered simultaneously, one from each pair of side by side tires.<!--EndFragment--><br/></p></div>"@en ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/7d9b6640-a5e9-43f6-bfc7-7a341621f50c/ThrownTread_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/7d9b6640-a5e9-43f6-bfc7-7a341621f50c/ThrownTread_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Thrown Tread"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/7db3114a-8b85-4e4f-adcd-b0e58f1b216b>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedSystemElement> ;
+        sem:guid          "7db3114a-8b85-4e4f-adcd-b0e58f1b216b" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/e65c9ed5-0044-440d-ae33-fe1464269a44> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/7db3114a-8b85-4e4f-adcd-b0e58f1b216b/CheckValveInTheLeadingGearDoorPressure_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/7db3114a-8b85-4e4f-adcd-b0e58f1b216b/CheckValveInTheLeadingGearDoorPressure_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Check Valve in the leading gear door pressure"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/7ffe22a1-9e0f-49b7-ae17-bed642fc5ab3>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        sem:guid          "7ffe22a1-9e0f-49b7-ae17-bed642fc5ab3" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/6a1312df-9f16-4436-80de-058c39b54a73> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/7ffe22a1-9e0f-49b7-ae17-bed642fc5ab3/StructuralDesign_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/7ffe22a1-9e0f-49b7-ae17-bed642fc5ab3/StructuralDesign_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Structural Design"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/80b58264-a141-4c9b-8b9c-2f3fd6cc23c5>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/FailureEffects> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/ResultFrom>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/fd7aca26-4c33-41aa-887c-2f5f9afbd753> ;
+        sem:guid          "80b58264-a141-4c9b-8b9c-2f3fd6cc23c5" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/ed988486-3681-4c01-82f8-800c54947f31> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/80b58264-a141-4c9b-8b9c-2f3fd6cc23c5/HighPressureGasPlume_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/80b58264-a141-4c9b-8b9c-2f3fd6cc23c5/HighPressureGasPlume_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "High Pressure Gas Plume"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/817d10f0-5f59-48d7-9c43-5d810f5ec5e3>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        sem:guid          "817d10f0-5f59-48d7-9c43-5d810f5ec5e3" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/817d10f0-5f59-48d7-9c43-5d810f5ec5e3/OverPressurizationOfWheelWell_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/817d10f0-5f59-48d7-9c43-5d810f5ec5e3/OverPressurizationOfWheelWell_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Over Pressurization of Wheel Well"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/829b9f16-4d80-4ad5-9c66-0a4bb48a5c54>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/OccursDuring>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/1d3a6670-922e-4eeb-bcc5-7206641d0f01> ;
+        sem:guid          "829b9f16-4d80-4ad5-9c66-0a4bb48a5c54" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/eeca68e4-3463-418c-97c8-73ed63f61f48> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/829b9f16-4d80-4ad5-9c66-0a4bb48a5c54/RimSegmentRelease_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/829b9f16-4d80-4ad5-9c66-0a4bb48a5c54/RimSegmentRelease_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Rim Segment Release"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/82e807a6-458e-43bc-86ed-7a415adb9e07>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Models> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedBy>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/2b7bca60-2850-49dc-9bd2-034ac24dd15a> , <http://termbank.web.boeing.com/uim/TireBurstModel/49beb8a3-2d35-4eee-8dc3-ec7be067b217> , <http://termbank.web.boeing.com/uim/TireBurstModel/f5859b28-3c20-4b91-9e6b-b9008fbc71e0> ;
+        sem:guid          "82e807a6-458e-43bc-86ed-7a415adb9e07" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/c7a6f17e-5afe-4b7c-a8f3-d55a203be0fb> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/82e807a6-458e-43bc-86ed-7a415adb9e07/787-10_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/82e807a6-458e-43bc-86ed-7a415adb9e07/787-10_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "787-10"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        sem:guid          "88299d58-3cae-486d-95aa-488884d5ab57" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57/Function_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57/Function_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Function"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/8aff4352-87f8-490d-b213-9d94c28a57f1>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        sem:guid          "8aff4352-87f8-490d-b213-9d94c28a57f1" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/8aff4352-87f8-490d-b213-9d94c28a57f1/ControlAirspeedAndFlightPath_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/8aff4352-87f8-490d-b213-9d94c28a57f1/ControlAirspeedAndFlightPath_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Control Airspeed and Flight Path"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "8d946d82-b95c-41af-a9e4-fc01a48c63ce" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce/ModelModification_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce/ModelModification_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Model Modification"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/8ddf6447-de7b-41a0-a72e-e2758cf9fd80>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        sem:guid          "8ddf6447-de7b-41a0-a72e-e2758cf9fd80" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/8ddf6447-de7b-41a0-a72e-e2758cf9fd80/SurvivableCabinEnvironment_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/8ddf6447-de7b-41a0-a72e-e2758cf9fd80/SurvivableCabinEnvironment_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Survivable Cabin Environment"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/947602c1-1843-4988-bf84-58394f044e84>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/Causes>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/fd7aca26-4c33-41aa-887c-2f5f9afbd753> ;
+        sem:guid          "947602c1-1843-4988-bf84-58394f044e84" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/947602c1-1843-4988-bf84-58394f044e84/ForeignObjectDamage_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/947602c1-1843-4988-bf84-58394f044e84/ForeignObjectDamage_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Foreign Object Damage"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/97a67c2b-c1ec-4050-a5b3-2af658352f3e>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "97a67c2b-c1ec-4050-a5b3-2af658352f3e" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/97a67c2b-c1ec-4050-a5b3-2af658352f3e/IntegratedCoolingSystem_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/97a67c2b-c1ec-4050-a5b3-2af658352f3e/IntegratedCoolingSystem_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Integrated Cooling System"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/9c25cbe1-996c-4e4b-9d8f-c7f2818f3d05>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        sem:guid          "9c25cbe1-996c-4e4b-9d8f-c7f2818f3d05" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/9c25cbe1-996c-4e4b-9d8f-c7f2818f3d05/MainGearWheelWell_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/9c25cbe1-996c-4e4b-9d8f-c7f2818f3d05/MainGearWheelWell_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Main Gear Wheel Well"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/9da34b67-aa51-4945-9bce-822f1b523b54>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedSystemElement> ;
+        sem:guid          "9da34b67-aa51-4945-9bce-822f1b523b54" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/e65c9ed5-0044-440d-ae33-fe1464269a44> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/9da34b67-aa51-4945-9bce-822f1b523b54/HighLiftSystem_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/9da34b67-aa51-4945-9bce-822f1b523b54/HighLiftSystem_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "High Lift System"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/AffectedBy>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/Models> ;
+        rdfs:label          "Affected by"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/AppliesTo> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/AffectedBy0>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        rdfs:label          "Affected By"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/Affects> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/AffectedSystemElement>
+        a                owl:Class ;
+        rdfs:label       "Affected System Elements"@en ;
+        rdfs:subClassOf  <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/Affects>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:label          "Affects"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedBy0> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/AppliesTo>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        rdfs:label          "Applies to"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/Models> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedBy> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/CausedBy>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:label          "Caused by"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/Causes> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/Causes>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        rdfs:label          "Causes"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/CausedBy> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/ChangesIn>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        rdfs:label          "Changes in"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/Models> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/HasChangesTo> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/ConceptScheme/3de07b6d-17d9-42f3-8103-2416244e2f14>
+        a                   skos:ConceptScheme ;
+        rdfs:label          "Tire Burst"@en ;
+        sem:guid            "3de07b6d-17d9-42f3-8103-2416244e2f14" ;
+        skos:hasTopConcept  <http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec> , <http://termbank.web.boeing.com/uim/TireBurstModel/1e4c09be-8f67-4d8d-9165-83ed645b6d2d> , <http://termbank.web.boeing.com/uim/TireBurstModel/55395bd6-4d31-42bb-a01f-22f01b644932> , <http://termbank.web.boeing.com/uim/TireBurstModel/594d5fa9-47a5-4fa0-a572-3ced26ee8d69> , <http://termbank.web.boeing.com/uim/TireBurstModel/6a1312df-9f16-4436-80de-058c39b54a73> , <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57> , <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> , <http://termbank.web.boeing.com/uim/TireBurstModel/c7a6f17e-5afe-4b7c-a8f3-d55a203be0fb> , <http://termbank.web.boeing.com/uim/TireBurstModel/e22c0c45-75fc-4316-befb-5fa1c625f79e> , <http://termbank.web.boeing.com/uim/TireBurstModel/ed988486-3681-4c01-82f8-800c54947f31> , <http://termbank.web.boeing.com/uim/TireBurstModel/eeca68e4-3463-418c-97c8-73ed63f61f48> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/Effects>
+        a                owl:Class ;
+        rdfs:label       "Effects"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/ExposedSystemElements>
+        a                owl:Class ;
+        rdfs:label       "Exposed System Elements"@en ;
+        rdfs:subClassOf  <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/FailureEffects>
+        a                owl:Class ;
+        rdfs:label       "Failure Effects"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes>
+        a                owl:Class ;
+        rdfs:label       "Failure Modes"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/Functions>
+        a                owl:Class ;
+        rdfs:label       "Functions"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/GearMode>
+        a                owl:Class ;
+        rdfs:label       "Gear Modes"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/HasChangesTo>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/Models> ;
+        rdfs:label          "Has Changes to"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/ChangesIn> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/HasFailure>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/GearMode> ;
+        rdfs:label          "Has Failure"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/OccursDuring> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/Mechanism>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:label          "Mechanism"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/FailureEffects> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/ResultFrom> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/MitigatedBy>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:label          "Mitigated by"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/Mitigates> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/Mitigates>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        rdfs:label          "Mitigates"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/MitigatedBy> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies>
+        a                owl:Class ;
+        rdfs:label       "Mitigation Strategies"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications>
+        a                owl:Class ;
+        rdfs:label       "Model Modifications"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/Models>
+        a                owl:Class ;
+        rdfs:label       "Models"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/OccursDuring>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:label          "Occurs During"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/GearMode> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/HasFailure> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/Perform>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        rdfs:label          "Perform"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/PerformedBy> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/PerformedBy>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        rdfs:label          "Performed by"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/Perform> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/ResultFrom>
+        a                   owl:ObjectProperty ;
+        rdfs:domain         <http://termbank.web.boeing.com/uim/TireBurstModel/FailureEffects> ;
+        rdfs:label          "Result From"@en ;
+        rdfs:range          <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        rdfs:subPropertyOf  skos:related ;
+        owl:inverseOf       <http://termbank.web.boeing.com/uim/TireBurstModel/Mechanism> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement>
+        a                owl:Class ;
+        rdfs:label       "System Elements"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses>
+        a                owl:Class ;
+        rdfs:label       "Threat Causes"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/ThreatZones>
+        a                owl:Class ;
+        rdfs:label       "Threat Zones"@en ;
+        rdfs:subClassOf  skos:Concept .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/Tires>
+        a                owl:Class ;
+        rdfs:label       "Tires"@en ;
+        rdfs:subClassOf  <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/a11cc329-2c67-4214-86d2-b4980192bd4e>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Models> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedBy>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/2b7bca60-2850-49dc-9bd2-034ac24dd15a> , <http://termbank.web.boeing.com/uim/TireBurstModel/49beb8a3-2d35-4eee-8dc3-ec7be067b217> , <http://termbank.web.boeing.com/uim/TireBurstModel/bc13161f-2ced-4d65-9dde-332f4f6ac0ec> , <http://termbank.web.boeing.com/uim/TireBurstModel/f5859b28-3c20-4b91-9e6b-b9008fbc71e0> ;
+        sem:guid          "a11cc329-2c67-4214-86d2-b4980192bd4e" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/c7a6f17e-5afe-4b7c-a8f3-d55a203be0fb> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/a11cc329-2c67-4214-86d2-b4980192bd4e/787-9_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/a11cc329-2c67-4214-86d2-b4980192bd4e/787-9_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "787-9"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b1251a9b-bf96-4844-8849-3c9929659f8a>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/Mechanism>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/e3fbcd39-cd22-44f4-b0e2-c4f9d40552d6> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/OccursDuring>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/1d3a6670-922e-4eeb-bcc5-7206641d0f01> , <http://termbank.web.boeing.com/uim/TireBurstModel/34516d38-be22-4700-a45e-2215a79c4635> , <http://termbank.web.boeing.com/uim/TireBurstModel/e96a11ed-d942-4ff3-b77e-ab460271b2d3> ;
+        sem:guid          "b1251a9b-bf96-4844-8849-3c9929659f8a" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/eeca68e4-3463-418c-97c8-73ed63f61f48> ;
+        skos:definition   "<p><!--StartFragment-->This is a loose tire tread that rotates with the tire. <br/>This tread can impact components and transport elements on the landing gear.<!--EndFragment--><br/></p>"@en ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/b1251a9b-bf96-4844-8849-3c9929659f8a/FlailyingThread_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b1251a9b-bf96-4844-8849-3c9929659f8a/FlailyingThread_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Flailing Thread"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b3f98c16-c9f1-47ce-96d2-de960d5338f4>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "b3f98c16-c9f1-47ce-96d2-de960d5338f4" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/b3f98c16-c9f1-47ce-96d2-de960d5338f4/WheelSize_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b3f98c16-c9f1-47ce-96d2-de960d5338f4/WheelSize_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Wheel Size"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b4ac0597-16db-47eb-b7ea-59749f63db4a>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Tires> ;
+        sem:guid          "b4ac0597-16db-47eb-b7ea-59749f63db4a" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/1e4c09be-8f67-4d8d-9165-83ed645b6d2d> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/b4ac0597-16db-47eb-b7ea-59749f63db4a/Tire_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b4ac0597-16db-47eb-b7ea-59749f63db4a/Tire_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Tire"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b73f29f5-dd27-44b0-8aff-bae9b79e43af>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatZones> ;
+        sem:guid          "b73f29f5-dd27-44b0-8aff-bae9b79e43af" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/e22c0c45-75fc-4316-befb-5fa1c625f79e> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/b73f29f5-dd27-44b0-8aff-bae9b79e43af/WingFixedTrailingEdgeNearSideOfBody_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b73f29f5-dd27-44b0-8aff-bae9b79e43af/WingFixedTrailingEdgeNearSideOfBody_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Wing Fixed Trailing edge Near side of body"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b8371d72-629b-4daf-bc5e-06cf07b50de2>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "b8371d72-629b-4daf-bc5e-06cf07b50de2" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/b8371d72-629b-4daf-bc5e-06cf07b50de2/MainWheels_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/b8371d72-629b-4daf-bc5e-06cf07b50de2/MainWheels_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Main Wheels"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/bc13161f-2ced-4d65-9dde-332f4f6ac0ec>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/AppliesTo>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/570c3129-65ed-43bb-85d9-2b1f5e291814> , <http://termbank.web.boeing.com/uim/TireBurstModel/a11cc329-2c67-4214-86d2-b4980192bd4e> ;
+        sem:guid          "bc13161f-2ced-4d65-9dde-332f4f6ac0ec" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/eac1e5cf-595f-40f8-8952-43865ae6b082> ;
+        skos:definition   "<p><!--StartFragment-->Addition of two new pressure operated check valves (POCV), one in the head end return line of each main gear retract actuator.<br/></p>"@en ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/bc13161f-2ced-4d65-9dde-332f4f6ac0ec/AddTwoNewCheckValves_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/bc13161f-2ced-4d65-9dde-332f4f6ac0ec/AddTwoNewCheckValves_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Add Two new Check Valves"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/bebe8c3b-8060-47bf-80ba-6625da288cbd>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "bebe8c3b-8060-47bf-80ba-6625da288cbd" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/bebe8c3b-8060-47bf-80ba-6625da288cbd/FloorAboveTheMainWheelWell_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/bebe8c3b-8060-47bf-80ba-6625da288cbd/FloorAboveTheMainWheelWell_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Floor above the Main Wheel Well"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c22097cc-724b-42fb-bfc4-04d25193935d>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        sem:guid          "c22097cc-724b-42fb-bfc4-04d25193935d" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/c22097cc-724b-42fb-bfc4-04d25193935d/LandingGearStructures_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c22097cc-724b-42fb-bfc4-04d25193935d/LandingGearStructures_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Landing Gear Strut"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c4282255-9336-48b0-a47a-0f0659d78276>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatZones> ;
+        sem:guid          "c4282255-9336-48b0-a47a-0f0659d78276" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/e22c0c45-75fc-4316-befb-5fa1c625f79e> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/c4282255-9336-48b0-a47a-0f0659d78276/MainLandingGearWheelWell_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c4282255-9336-48b0-a47a-0f0659d78276/MainLandingGearWheelWell_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Main Landing Gear Wheel Well"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c62f64df-a785-400d-8bd6-d6d773c22a68>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "c62f64df-a785-400d-8bd6-d6d773c22a68" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/c62f64df-a785-400d-8bd6-d6d773c22a68/ProximitySensors_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c62f64df-a785-400d-8bd6-d6d773c22a68/ProximitySensors_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Proximity Sensors"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c7938445-d16b-4d8a-b6e7-e4974bf88c27>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatCauses> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/Causes>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/3f50ef4c-5c80-4cd9-a7dd-001bae2ed787> ;
+        sem:guid          "c7938445-d16b-4d8a-b6e7-e4974bf88c27" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/18938d54-ffb1-4bf6-8a36-6b5c54015fec> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/c7938445-d16b-4d8a-b6e7-e4974bf88c27/HeatFromBrake_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c7938445-d16b-4d8a-b6e7-e4974bf88c27/HeatFromBrake_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Heat from Brake"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c7a6f17e-5afe-4b7c-a8f3-d55a203be0fb>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Models> ;
+        sem:guid          "c7a6f17e-5afe-4b7c-a8f3-d55a203be0fb" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/c7a6f17e-5afe-4b7c-a8f3-d55a203be0fb/model_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/c7a6f17e-5afe-4b7c-a8f3-d55a203be0fb/model_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Model"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/cb86128c-4584-4b3f-8c38-3b17f54e8958>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/SystemElement> ;
+        sem:guid          "cb86128c-4584-4b3f-8c38-3b17f54e8958" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/cb86128c-4584-4b3f-8c38-3b17f54e8958/WheelWell_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/cb86128c-4584-4b3f-8c38-3b17f54e8958/WheelWell_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Wheel Well"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/cc85cda6-7e2f-4cd7-8592-0ee12e753aea>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        sem:guid          "cc85cda6-7e2f-4cd7-8592-0ee12e753aea" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/cc85cda6-7e2f-4cd7-8592-0ee12e753aea/LateralFlightControl-Roll-_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/cc85cda6-7e2f-4cd7-8592-0ee12e753aea/LateralFlightControl-Roll-_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Lateral Flight Control (Roll)"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/cf6d9191-f3ec-4b71-9711-dc9159e16e12>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "cf6d9191-f3ec-4b71-9711-dc9159e16e12" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/cf6d9191-f3ec-4b71-9711-dc9159e16e12/Hydraulics_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/cf6d9191-f3ec-4b71-9711-dc9159e16e12/Hydraulics_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Hydraulics"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/d3728445-46bb-463d-9d8e-72d8f1198053>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedSystemElement> ;
+        sem:guid          "d3728445-46bb-463d-9d8e-72d8f1198053" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/e65c9ed5-0044-440d-ae33-fe1464269a44> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/d3728445-46bb-463d-9d8e-72d8f1198053/WheelWellFireDetectionSystem_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/d3728445-46bb-463d-9d8e-72d8f1198053/WheelWellFireDetectionSystem_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Wheel Well Fire Detection System"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/d58b1d2e-06ed-4ca9-ae32-b97cebed5e6e>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "d58b1d2e-06ed-4ca9-ae32-b97cebed5e6e" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/d58b1d2e-06ed-4ca9-ae32-b97cebed5e6e/Semi-LeverGearActuator_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/d58b1d2e-06ed-4ca9-ae32-b97cebed5e6e/Semi-LeverGearActuator_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Semi-Lever Gear Actuator"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ExposedSystemElements> ;
+        sem:guid          "da90e18b-d045-483e-a2e6-0a85ad31db96" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/1e4c09be-8f67-4d8d-9165-83ed645b6d2d> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96/ExposedSystemElement_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/da90e18b-d045-483e-a2e6-0a85ad31db96/ExposedSystemElement_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Exposed System Element"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/dfb7ac71-846a-489b-a6c3-cdf11f7eb4df>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ModelModifications> ;
+        sem:guid          "dfb7ac71-846a-489b-a6c3-cdf11f7eb4df" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/8d946d82-b95c-41af-a9e4-fc01a48c63ce> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/dfb7ac71-846a-489b-a6c3-cdf11f7eb4df/Tires_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/dfb7ac71-846a-489b-a6c3-cdf11f7eb4df/Tires_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Tires"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/e22c0c45-75fc-4316-befb-5fa1c625f79e>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/ThreatZones> ;
+        sem:guid          "e22c0c45-75fc-4316-befb-5fa1c625f79e" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/e22c0c45-75fc-4316-befb-5fa1c625f79e/ThreatZone_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/e22c0c45-75fc-4316-befb-5fa1c625f79e/ThreatZone_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Threat Zone"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/e3fbcd39-cd22-44f4-b0e2-c4f9d40552d6>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/FailureEffects> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/ResultFrom>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/3f50ef4c-5c80-4cd9-a7dd-001bae2ed787> , <http://termbank.web.boeing.com/uim/TireBurstModel/7d9b6640-a5e9-43f6-bfc7-7a341621f50c> , <http://termbank.web.boeing.com/uim/TireBurstModel/b1251a9b-bf96-4844-8849-3c9929659f8a> ;
+        sem:guid          "e3fbcd39-cd22-44f4-b0e2-c4f9d40552d6" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/ed988486-3681-4c01-82f8-800c54947f31> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/e3fbcd39-cd22-44f4-b0e2-c4f9d40552d6/DirectImpact_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/e3fbcd39-cd22-44f4-b0e2-c4f9d40552d6/DirectImpact_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Direct Impact"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/e65c9ed5-0044-440d-ae33-fe1464269a44>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/AffectedSystemElement> ;
+        sem:guid          "e65c9ed5-0044-440d-ae33-fe1464269a44" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/1e4c09be-8f67-4d8d-9165-83ed645b6d2d> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/e65c9ed5-0044-440d-ae33-fe1464269a44/AffectedSystemElement_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/e65c9ed5-0044-440d-ae33-fe1464269a44/AffectedSystemElement_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Affected System Element"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/e96a11ed-d942-4ff3-b77e-ab460271b2d3>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/GearMode> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/HasFailure>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/b1251a9b-bf96-4844-8849-3c9929659f8a> ;
+        sem:guid          "e96a11ed-d942-4ff3-b77e-ab460271b2d3" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/594d5fa9-47a5-4fa0-a572-3ced26ee8d69> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/e96a11ed-d942-4ff3-b77e-ab460271b2d3/GearRetracting_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/e96a11ed-d942-4ff3-b77e-ab460271b2d3/GearRetracting_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Gear Retracting"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/eac1e5cf-595f-40f8-8952-43865ae6b082>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        sem:guid          "eac1e5cf-595f-40f8-8952-43865ae6b082" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/6a1312df-9f16-4436-80de-058c39b54a73> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/eac1e5cf-595f-40f8-8952-43865ae6b082/PlumbingDesign_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/eac1e5cf-595f-40f8-8952-43865ae6b082/PlumbingDesign_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Plumbing Design"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/ed988486-3681-4c01-82f8-800c54947f31>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/FailureEffects> ;
+        sem:guid          "ed988486-3681-4c01-82f8-800c54947f31" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/ed988486-3681-4c01-82f8-800c54947f31/FailureEffect_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/ed988486-3681-4c01-82f8-800c54947f31/FailureEffect_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Failure Effect"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/eeca68e4-3463-418c-97c8-73ed63f61f48>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        sem:guid          "eeca68e4-3463-418c-97c8-73ed63f61f48" ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/eeca68e4-3463-418c-97c8-73ed63f61f48/FailureMode_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/eeca68e4-3463-418c-97c8-73ed63f61f48/FailureMode_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Failure Mode"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/f5859b28-3c20-4b91-9e6b-b9008fbc71e0>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/MitigationStrategies> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/AppliesTo>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/570c3129-65ed-43bb-85d9-2b1f5e291814> , <http://termbank.web.boeing.com/uim/TireBurstModel/82e807a6-458e-43bc-86ed-7a415adb9e07> , <http://termbank.web.boeing.com/uim/TireBurstModel/a11cc329-2c67-4214-86d2-b4980192bd4e> ;
+        sem:guid          "f5859b28-3c20-4b91-9e6b-b9008fbc71e0" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/eac1e5cf-595f-40f8-8952-43865ae6b082> ;
+        skos:definition   "<p>in the return line of the main landing gear door <br/>pressure operated valve.<!--EndFragment--><br/></p><div><p><br/></p></div>"@en ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/f5859b28-3c20-4b91-9e6b-b9008fbc71e0/PressureCheckValve_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/f5859b28-3c20-4b91-9e6b-b9008fbc71e0/PressureCheckValve_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Add New Pressure Check Valve"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/f94c4293-2473-4fd2-b75f-1e78b0411c42>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/Functions> ;
+        sem:guid          "f94c4293-2473-4fd2-b75f-1e78b0411c42" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/88299d58-3cae-486d-95aa-488884d5ab57> ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/f94c4293-2473-4fd2-b75f-1e78b0411c42/AbilityToNavigateToASuitableAirport_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/f94c4293-2473-4fd2-b75f-1e78b0411c42/AbilityToNavigateToASuitableAirport_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Ability to Navigate to a Suitable Airport"@en .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/fd7aca26-4c33-41aa-887c-2f5f9afbd753>
+        a                 <http://termbank.web.boeing.com/uim/TireBurstModel/FailureModes> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/CausedBy>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/286bf2a5-b047-43fb-b48b-81ce49c2fb9e> , <http://termbank.web.boeing.com/uim/TireBurstModel/78e9dc28-876d-474f-9c8b-6925dae566df> , <http://termbank.web.boeing.com/uim/TireBurstModel/947602c1-1843-4988-bf84-58394f044e84> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/Mechanism>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/80b58264-a141-4c9b-8b9c-2f3fd6cc23c5> ;
+        <http://termbank.web.boeing.com/uim/TireBurstModel/OccursDuring>
+                <http://termbank.web.boeing.com/uim/TireBurstModel/1d3a6670-922e-4eeb-bcc5-7206641d0f01> , <http://termbank.web.boeing.com/uim/TireBurstModel/34516d38-be22-4700-a45e-2215a79c4635> ;
+        sem:guid          "fd7aca26-4c33-41aa-887c-2f5f9afbd753" ;
+        skos:broader      <http://termbank.web.boeing.com/uim/TireBurstModel/eeca68e4-3463-418c-97c8-73ed63f61f48> ;
+        skos:definition   "<p><!--StartFragment-->This is when the carcass of the tire is damaged and releases the internal compressed gas. <br/>Tire damage can occur from braking skids, foreign object damage (FOD), <br/>or under inflation. </p><div><p>The major damage effect to the airplane is due to a high pressure gas plume being directed at equipment installations. <br/>Airplane damage can also occur as a result of possible tire deformation impacting equipment located close to the tire.<!--EndFragment--><br/></p></div><div><p><br/></p></div><div><p><!--StartFragment-->This is when the tire carcass was previously damaged but survived the takeoff roll. </p></div><div><p>Once in the wheel well the tire degradation continues until the tire carcass releases the internal compressed gas<!--EndFragment--><br/></p></div>"@en ;
+        skosxl:prefLabel  <http://termbank.web.boeing.com/uim/TireBurstModel/fd7aca26-4c33-41aa-887c-2f5f9afbd753/TireBurst_en> .
+
+<http://termbank.web.boeing.com/uim/TireBurstModel/fd7aca26-4c33-41aa-887c-2f5f9afbd753/TireBurst_en>
+        a                   skosxl:Label ;
+        skosxl:literalForm  "Tire Burst"@en .
+
+model:TireBurstModel  a  teamwork:Vocabulary , owl:Ontology ;
+        spin:imports  <http://www.smartlogic.com/2015/02/semaphore-spin-constraints> , <http://www.smartlogic.com/2015/12/unique-concept-label-constraint> , <http://www.smartlogic.com/2015/12/unique-concept-label-in-class-constraint> , <http://www.smartlogic.com/2018/04/semaphore-ordering-constraints> ;
+        owl:imports   <http://www.smartlogic.com/2014/08/semaphore-core> .
